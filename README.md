@@ -1,8 +1,8 @@
 # Volný projekt
 
-> **Jméno a příjmení:** `Doplňte`
+> **Jméno a příjmení:** `Michal František Líbal`
 
-> **Název projektu:** `Doplňte`
+> **Název projektu:** `Osobní portfolio`
 
 ---
 
@@ -28,17 +28,16 @@ _Kdo je váš cílový uživatel / zákazník? Popište typického zástupce cí
 
 `Doplňte cílovou skupinu.`
 
-
 ## Odkazy a výstupy
 
 _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
-| Výstup | Odkaz |
-|---|---|
-| GitHub Pages (live) | [`Doplň odkaz`](#) |
+| Výstup                          | Odkaz              |
+| ------------------------------- | ------------------ |
+| GitHub Pages (live)             | [`Doplň odkaz`](#) |
 | Grafický manuál (Figma / Canva) | [`Doplň odkaz`](#) |
-| Grafický návrh webu (Figma) | [`Doplň odkaz`](#) |
-| Fotografie / média | [`Doplň odkaz`](#) |
+| Grafický návrh webu (Figma)     | [`Doplň odkaz`](#) |
+| Fotografie / média              | [`Doplň odkaz`](#) |
 
 ---
 
