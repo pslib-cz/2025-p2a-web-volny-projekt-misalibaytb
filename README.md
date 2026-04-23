@@ -32,12 +32,12 @@ _Kdo je váš cílový uživatel / zákazník? Popište typického zástupce cí
 
 _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
-| Výstup                          | Odkaz              |
-| ------------------------------- | ------------------ |
-| GitHub Pages (live)             | [`Doplň odkaz`](#) |
-| Grafický manuál (Figma / Canva) | [`Doplň odkaz`](#) |
-| Grafický návrh webu (Figma)     | [`Doplň odkaz`](#) |
-| Fotografie / média              | [`Doplň odkaz`](#) |
+| Výstup                          | Odkaz                                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| GitHub Pages (live)             | [`https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb`](#)                               |
+| Grafický manuál (Figma / Canva) | [`https://www.figma.com/files/team/1576276002201662873/project/591202459?fuid=1573629996979510066`](#) |
+| Grafický návrh webu (Figma)     | [`Doplň odkaz`](#)                                                                                     |
+| Fotografie / média              | [`Doplň odkaz`](#)                                                                                     |
 
 ---
 
