@@ -6,7 +6,7 @@ export default function DefaultLayout() {
     return (
         <>
             <Navbar />
-            {/* {outlet} */}
+            {outlet}
             <span style={{ color: "white" }}>ds</span>
         </>
     );
