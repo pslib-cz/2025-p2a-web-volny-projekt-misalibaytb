@@ -15,17 +15,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="/assets/styles/main.css" />
 </head>
 
 <body>
     <div id="root">
-        <misaliba-navbar />
-        <section class="home">
-            <div class="container">
-                <misaliba-user-card />
-            </div>
-        </section>
+        <header>
+            <misaliba-navbar />
+        </header>
+
+        <main role="main">
+            <section class="home" aria-labelledby="home-heading">
+                <div class="container">
+                    <article>
+                        <misaliba-user-card />
+                    </article>
+                </div>
+            </section>
+        </main>
+        <misaliba-footer />
     </div>
 </body>
 

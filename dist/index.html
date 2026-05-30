@@ -22,75 +22,92 @@
 
     <body>
         <div id="root">
-            <nav id="nav">
-                <div class="container">
-                    <div class="head">
-                        <a href="/">misaliba</a>
-                        <input id="hamburger-toggle" class="hamburger-toggle" type="checkbox" />
-                        <label class="hamburger" for="hamburger-toggle" aria-label="Open menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
+            <header>
+                <nav id="nav">
+                    <div class="container">
+                        <div class="head">
+                            <a href="/">misaliba</a>
+                            <input id="hamburger-toggle" class="hamburger-toggle" type="checkbox" />
+                            <label class="hamburger" for="hamburger-toggle" aria-label="Open menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="links">
+                            <a href="/"><i class="far fa-user" aria-hidden="true"></i>About</a>
+                            <a href="/skills"><i class="fas fa-bolt"></i>Skills</a>
+                            <a href="/projects"><i class="fas fa-code"></i>Projects</a>
+                            <a href="/contact"><i class="far fa-envelope"></i>Contact</a>
+                        </div>
                     </div>
-                    <div class="links">
-                        <a href="/"><i class="far fa-user" aria-hidden="true"></i>About</a>
-                        <a href="/skills"><i class="fas fa-bolt"></i>Skills</a>
-                        <a href="/projects"><i class="fas fa-code"></i>Projects</a>
-                        <a href="/contact"><i class="far fa-envelope"></i>Contact</a>
+                </nav>
+            </header>
+
+            <main role="main">
+                <section class="home" aria-labelledby="home-heading">
+                    <div class="container">
+                        <article>
+                            <article class="user-card">
+                                <header class="user-card__wrapper">
+                                    <div class="banner" aria-hidden="true"></div>
+                                    <figure class="avatar-frame">
+                                        <picture
+                                            ><source
+                                                type="image/avif"
+                                                srcset="
+                                                    assets/images/avatar-120w.avif 120w,
+                                                    assets/images/avatar-180w.avif 180w,
+                                                    assets/images/avatar-240w.avif 240w,
+                                                    assets/images/avatar-360w.avif 360w
+                                                "
+                                                sizes="120px" />
+                                            <source
+                                                type="image/webp"
+                                                srcset="
+                                                    assets/images/avatar-120w.webp 120w,
+                                                    assets/images/avatar-180w.webp 180w,
+                                                    assets/images/avatar-240w.webp 240w,
+                                                    assets/images/avatar-360w.webp 360w
+                                                "
+                                                sizes="120px" />
+                                            <img
+                                                src="assets/images/avatar-360w.webp"
+                                                alt="misaliba's profile picture"
+                                                class="avatar"
+                                                loading="lazy"
+                                                decoding="async"
+                                                width="886"
+                                                height="886"
+                                        /></picture>
+                                    </figure>
+                                    <section class="bio" aria-labelledby="user-card-username">
+                                        <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
+                                        <p class="name">misaliba · she/him</p>
+                                        <p class="yap">
+                                            Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending PSLIB.CZ high school.
+                                        </p>
+                                        <p class="yap">I have a passion for working on low-level projects, including my own operating system.</p>
+                                        <p class="yap">
+                                            However, I also enjoy building infrastructure-focused systems, such as custom container orchestrators and reverse
+                                            proxies.
+                                        </p>
+                                        <p class="yap">
+                                            Currently, I’m primarily creating projects to gain a deeper understanding of how things work under the hood and how
+                                            different components interact before embarking on more significant and serious projects.
+                                        </p>
+                                    </section>
+                                </header>
+                            </article>
+                            <article class="skillcard">
+                                <strong>8+</strong>
+                                <p>years coding</p>
+                            </article>
+                        </article>
                     </div>
-                </div>
-            </nav>
-            <section class="home">
-                <div class="container">
-                    <article class="user-card">
-                        <header class="user-card__wrapper">
-                            <div class="banner" aria-hidden="true"></div>
-                            <figure class="avatar-frame">
-                                <picture
-                                    ><source
-                                        type="image/avif"
-                                        srcset="
-                                            assets/images/avatar-120w.avif 120w,
-                                            assets/images/avatar-180w.avif 180w,
-                                            assets/images/avatar-240w.avif 240w,
-                                            assets/images/avatar-360w.avif 360w
-                                        "
-                                        sizes="120px" />
-                                    <source
-                                        type="image/webp"
-                                        srcset="
-                                            assets/images/avatar-120w.webp 120w,
-                                            assets/images/avatar-180w.webp 180w,
-                                            assets/images/avatar-240w.webp 240w,
-                                            assets/images/avatar-360w.webp 360w
-                                        "
-                                        sizes="120px" />
-                                    <img
-                                        src="assets/images/avatar-360w.webp"
-                                        alt="misaliba's profile picture"
-                                        class="avatar"
-                                        loading="lazy"
-                                        decoding="async"
-                                        width="886"
-                                        height="886"
-                                /></picture>
-                            </figure>
-                            <section class="bio" aria-labelledby="user-card-username">
-                                <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
-                                <p class="name">misaliba · he/him</p>
-                                <p class="yap">
-                                    Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending PSLIB.CZ high school. I have a passion for
-                                    working on low-level projects, including my own operating system. However, I also enjoy building infrastructure-focused
-                                    systems, such as custom container orchestrators and reverse proxies.Currently, I’m primarily creating projects to gain a
-                                    deeper understanding of how things work under the hood and how different components interact before embarking on more
-                                    significant and serious projects.
-                                </p>
-                            </section>
-                        </header>
-                    </article>
-                </div>
-            </section>
+                </section>
+            </main>
+            <footer aria-hidden="true">@ misaliba 2026 — made with ❤️</footer>
         </div>
     </body>
 </html>

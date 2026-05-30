@@ -31,10 +31,7 @@
       var(--user-card-accent) 96%
     );
     --user-card-inner-card:
-      linear-gradient(
-        color-mix(in srgb, var(--overlay) 60%, transparent),
-        color-mix(in srgb, var(--overlay) 60%, transparent)
-      ),
+      linear-gradient(var(--overlay), var(--overlay)),
       linear-gradient(
         180deg,
         var(--user-card-primary) 0%,
@@ -43,8 +40,8 @@
     --user-card-profile-picture-stroke:
       linear-gradient(
         180deg,
-        color-mix(in srgb, var(--overlay) 60%, transparent) 0%,
-        color-mix(in srgb, var(--overlay) 60%, transparent) 50%,
+        var(--overlay) 0%,
+        var(--overlay) 50%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 50%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 100%
       ),
@@ -291,6 +288,14 @@
       padding: 0;
     }
   }
+  footer {
+    width: 100%;
+    color: var(--white);
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
 }
 
 @layer component {
@@ -336,6 +341,7 @@
     padding: 4px;
     background: var(--user-card-profile-picture-stroke);
     overflow: hidden;
+    margin: 0;
   }
   .user-card .avatar {
     width: 100%;
@@ -350,6 +356,7 @@
     background: var(--user-card-inner-card);
     padding: 16px;
     padding-top: 78px; /* 60px so ve get far away form picture and 18px is padding */
+    margin-top: 0;
   }
   .user-card .bio .username {
     position: relative;
@@ -360,6 +367,7 @@
     color: var(--white);
     z-index: 0;
     border: 2px #00ff5e;
+    margin: 0;
   }
 
   .user-card .bio .username::before {
@@ -377,11 +385,43 @@
     font-weight: 300;
     color: var(--white);
     display: block;
+    margin: 0;
     margin-bottom: 24px;
   }
 
   .user-card .bio .yap {
     margin-top: 0;
     color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+  }
+  .skillcard {
+    background-color: var(--card-background);
+    border-radius: 16px;
+    border: 2px solid var(--card-stroke);
+    padding: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: fit-content;
+    max-width: 100%;
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+  .skillcard strong {
+    color: var(--text-highlight);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 0.9;
+    margin: 0 0 8px 0;
+  }
+  .skillcard p {
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0;
   }
 }

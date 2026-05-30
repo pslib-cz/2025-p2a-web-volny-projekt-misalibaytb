@@ -20,12 +20,21 @@
 
 <body>
     <div id="root">
-        <misaliba-navbar />
-        <section class="home">
-            <div class="container">
-                <misaliba-user-card />
-            </div>
-        </section>
+        <header>
+            <misaliba-navbar />
+        </header>
+
+        <main role="main">
+            <section class="home" aria-labelledby="home-heading">
+                <div class="container">
+                    <article>
+                        <misaliba-user-card />
+                        <misaliba-skillcard value="8+" name="years coding" />
+                    </article>
+                </div>
+            </section>
+        </main>
+        <misaliba-footer />
     </div>
 </body>
 
