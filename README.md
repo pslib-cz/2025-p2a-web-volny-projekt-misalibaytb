@@ -43,20 +43,20 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
 ## Poznámky
 
-_Prostor pro vlastní poznámky, zpětnou vazbu, TODO apod._
+The project merges components from `components/` with source files from `public/` and saves the output to `dist/`. It also optimizes image sizes.
 
-This project combines parts from `components/`with files from`public/`and saves the results in`dist/`. Plus, it makes the images look their best!
-
-To get started, make sure you have `ffmpeg-full` and all the Node modules you need. Then, just run:
+To run the script, install `ffmpeg-full` and all required Node modules. Then run:
 
     bun ./index.ts
 
-If you want the script to rebuild automatically whenever you change a file, try:
+For continuous rebuilds when files change, use:
 
     bun ./index.ts watch
 
-Want to see how the image sizes are calculated? You can add the `—debug-images` flag:
+To inspect how image sizes are generated, add the `--debug-images` flag:
 
-    bun ./index.ts —debug-images
+    bun ./index.ts --debug-images
 
-Most of the images are created as AVIF, but WebP is used if AVIF isn’t available. The script figures out the biggest image size and makes versions for different print sizes.
+Images are mainly generated as AVIF, with WebP used as a fallback. The script determines the maximum image size and generates variants for different DPI settings.
+
+## Feedback
