@@ -37,7 +37,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 | GitHub Pages (live)             | [`https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb`](https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb) |
 | Grafický manuál (Figma / Canva) | [`figmička`](https://www.figma.com/design/rRu9OZvp7D6qEb4vGKCI03/L%C3%ADbalMichal?node-id=14-166&t=vM4cCAPyTjtN33jT-0)                   |
 | Grafický návrh webu (Figma)     | [`figmička`](https://www.figma.com/design/rRu9OZvp7D6qEb4vGKCI03/L%C3%ADbalMichal?node-id=14-166&t=vM4cCAPyTjtN33jT-0)                   |
-| Fotografie / média              | [`/public/assets`](/public/assets)                                                                                                       |
+| Fotografie / média              | [`/public/assets`](/public/assets/images/)                                                                                               |
 
 ---
 
