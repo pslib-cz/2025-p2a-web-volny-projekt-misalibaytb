@@ -8,5 +8,8 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "scripts": {
+    "script:build": "bun build ./compile.ts --minify --target=bun --outfile=./index.ts && bun -e \"const f='index.ts'; const s=await Bun.file(f).text(); await Bun.write(f, '// script made by misaliba\\n' + s.split('\\n').slice(1).join('\\n'))\""
   }
 }

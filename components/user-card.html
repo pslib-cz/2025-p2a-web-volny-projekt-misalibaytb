@@ -1,20 +1,20 @@
 [component:user-card]
-<div class="user-card">
-    <div class="user-card__wrapper">
-        <div class="banner"></div>
-        <div class="avatar-frame">
-            <img src="./avatar.jpeg" alt="misaliba's profile picture" class="avatar">
-        </div>
-        <div class="bio">
-            <span class="username" data-text="qt misaliba">qt misaliba</span>
-            <span class="name">misaliba · he/him</span>
-            <span class="yap">Hi, I’m misaliba, an 18 y/o developer from Czechia currently attending pslib.cz high
-                school. I enjoy working on
-                low-level projects, including my own operating system, but I also like building infrastructure-focused
-                systems such as
-                custom container orchestrators and reverse proxies. Right now, I mainly create projects to better
-                understand how things
-                work under the hood and connect together before starting something bigger.</span>
-        </div>
-    </div>
-</div>
+<article class="user-card">
+    <header class="user-card__wrapper">
+        <div class="banner" aria-hidden="true"></div>
+        <figure class="avatar-frame">
+            <img src="/avatar.jpeg" alt="misaliba's profile picture" class="avatar" loading="lazy" decoding="async">
+        </figure>
+        <section class="bio" aria-labelledby="user-card-username">
+            <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
+            <p class="name">misaliba · he/him</p>
+            <p class="yap">Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending PSLIB.CZ
+                high school. I have a passion for working on low-level projects, including my own operating system.
+                However, I also enjoy building infrastructure-focused systems, such as custom container orchestrators
+                and reverse proxies.Currently, I’m primarily creating projects to gain a deeper
+                understanding of how
+                things work under the hood and how different components interact before embarking on more significant
+                and serious projects.</p>
+        </section>
+    </header>
+</article>
