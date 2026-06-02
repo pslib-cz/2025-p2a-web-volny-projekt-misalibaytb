@@ -1,0 +1,38 @@
+@layer component {
+  .experiencecard {
+    background-color: var(--purple-card-background);
+    border-radius: 16px;
+    border: 2px solid var(--purple-card-stroke);
+    padding: 16px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    width: 100%;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    gap: 10px;
+  }
+
+  .experiencecard i {
+    font-size: 2.25rem;
+    color: var(--white);
+  }
+  .experiencecard.inactive {
+    background-color: var(--card-background);
+    border-color: var(--card-stroke);
+  }
+  .experiencecard strong {
+    color: var(--text-heading);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    line-height: 0.9;
+    margin: 0 0 8px 0;
+  }
+  .experiencecard p {
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    margin: 0;
+  }
+}

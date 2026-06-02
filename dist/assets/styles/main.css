@@ -1,4 +1,5 @@
 @layer base, component, utility;
+
 /* setted */
 @layer base {
   :root {
@@ -22,6 +23,8 @@
 
     /* User Card */
     --user-card-primary: #000000;
+    /* --user-card-primary: #00ffd0; */
+    /* --user-card-primary: #00aaff; */
     --user-card-accent: #ff00f7;
     --user-card-username-stroke: #ff00fb;
     --overlay: var(--dark-overlay);
@@ -41,14 +44,14 @@
       linear-gradient(
         180deg,
         var(--overlay) 0%,
-        var(--overlay) 50%,
+        var(--overlay) 55%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 50%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 100%
       ),
       linear-gradient(
         180deg,
         var(--user-card-primary) 0%,
-        var(--user-card-primary) 50%,
+        var(--user-card-primary) 55%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 50%,
         color-mix(in srgb, var(--overlay) 0%, transparent) 100%
       );
@@ -56,7 +59,8 @@
     /* Text Colors */
     --text: #979797;
     --text-highlight: #f46fd6;
-    --text-hyperlink: #9571f8;
+    --text-hyperlink: #99b1ff;
+    --text-hyperlink-hover: rgb(203, 184, 255);
     --text-heading: var(--white);
 
     /* Default Card */
@@ -124,304 +128,41 @@
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
+    color: var(--text-hyperlink);
+    text-decoration-style: dashed;
+    transition: 0.3s ease-in-out;
+  }
+  a:hover {
+    color: var(--text-hyperlink-hover);
+    text-shadow:
+      0 0 0.4rem var(--text-hyperlink-hover),
+      0 0 1.5rem
+        color-mix(in srgb, var(--text-hyperlink-hover) 60%, transparent);
+  }
+  strong {
     color: var(--text-highlight);
   }
-
   .container {
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    padding: 16px 16px;
   }
-  nav {
-    width: 100%;
-    font-size: 2rem;
-  }
-  nav .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
-    padding: 1rem;
-  }
-  nav a {
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 32px;
-  }
-  nav .head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  nav .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    flex-wrap: nowrap;
-    width: fit-content;
-    max-height: 0px;
-    overflow: hidden;
-    opacity: 0;
-    transition:
-      max-height 0.5s ease-in-out,
-      padding 0.5s ease-in-out,
-      opacity 0.5s ease-in-out;
-    gap: 1.25rem;
-  }
-  nav:has(.hamburger-toggle:checked) .links {
-    max-height: 320px;
-    opacity: 1;
-    padding: 1.5rem 0;
-  }
-  nav .links a {
-    display: flex;
-    justify-content: flex-start;
-    gap: 0.75rem;
-    text-wrap: nowrap;
-    width: 100%;
-    color: var(--white);
-  }
-  .hamburger-toggle {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .hamburger span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    content: "";
-    width: 80%;
-    height: 4px;
-    background: var(--white);
-    border-radius: 16px;
-    transition:
-      top 0.25s ease-in-out 0.25s,
-      opacity 0s linear 0.25s,
-      transform 0.25s ease-in-out 0s;
-  }
-  nav:has(.hamburger-toggle:checked) .hamburger span {
-    transition:
-      top 0.25s ease-in-out 0s,
-      opacity 0s linear 0.25s,
-      transform 0.25s ease-in-out 0.25s;
-  }
-  .hamburger span:nth-child(1) {
-    top: 25%;
-  }
-  .hamburger span:nth-child(3) {
-    top: 75%;
-  }
-  nav:has(.hamburger-toggle:checked) .hamburger span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-  nav:has(.hamburger-toggle:checked) .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-  nav:has(.hamburger-toggle:checked) .hamburger span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-  @media screen and (min-width: 426px) {
-    nav .container {
-      align-items: center;
-      gap: 1rem 2rem;
+  @media print {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    b,
+    strong,
+    span {
+      color: #000000;
     }
-
-    nav .head {
-      justify-content: center;
+    main section {
+      break-after: page;
     }
-
-    nav .links {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      max-height: none;
-      overflow: visible;
-      opacity: 1;
-      padding: 0;
-    }
-
-    nav .links a {
-      width: auto;
-    }
-    .hamburger {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    nav .container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .head {
-      width: auto;
-    }
-
-    nav .links {
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      width: auto;
-      max-height: none;
-      overflow: visible;
-      opacity: 1;
-      padding: 0;
-    }
-  }
-  footer {
-    width: 100%;
-    color: var(--white);
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 2rem 0;
-  }
-}
-
-@layer component {
-  .home .container {
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-  }
-  .user-card {
-    display: flex;
-    max-width: 380px;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
-    border-radius: 8px;
-    border: 4px solid var(--user-card-card);
-    background: var(--user-card-card);
-    position: relative;
-    overflow: hidden;
-    padding: 4px;
-  }
-
-  .user-card__wrapper {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .user-card .banner {
-    background-color: var(--user-card-primary);
-    width: 100%;
-    height: 80px;
-  }
-  .user-card .avatar-frame {
-    position: absolute;
-    top: 20px;
-    left: 16px;
-    width: 120px;
-    height: 120px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    padding: 4px;
-    background: var(--user-card-profile-picture-stroke);
-    overflow: hidden;
-    margin: 0;
-  }
-  .user-card .avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .user-card .bio {
-    width: 100%;
-    background: var(--user-card-inner-card);
-    padding: 16px;
-    padding-top: 78px; /* 60px so ve get far away form picture and 18px is padding */
-    margin-top: 0;
-  }
-  .user-card .bio .username {
-    position: relative;
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--white);
-    z-index: 0;
-    border: 2px #00ff5e;
-    margin: 0;
-  }
-
-  .user-card .bio .username::before {
-    content: attr(data-text);
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    /* color: transparent; */
-    -webkit-text-stroke: 3px var(--user-card-username-stroke);
-  }
-
-  .user-card .bio .name {
-    font-family: "DM Sans", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--white);
-    display: block;
-    margin: 0;
-    margin-bottom: 24px;
-  }
-
-  .user-card .bio .yap {
-    margin-top: 0;
-    color: var(--white);
-    font-family: "DM Sans", sans-serif;
-    font-size: 14px;
-  }
-  .skillcard {
-    background-color: var(--card-background);
-    border-radius: 16px;
-    border: 2px solid var(--card-stroke);
-    padding: 16px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: fit-content;
-    max-width: 100%;
-    flex: 0 0 auto;
-    align-self: flex-start;
-  }
-  .skillcard strong {
-    color: var(--text-highlight);
-    font-family: "DM Sans", sans-serif;
-    font-weight: 800;
-    font-size: 1.5rem;
-    line-height: 0.9;
-    margin: 0 0 8px 0;
-  }
-  .skillcard p {
-    color: var(--text);
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.75rem;
-    font-weight: 300;
-    margin: 0;
   }
 }

@@ -1,0 +1,83 @@
+@layer component {
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .button {
+    --angle: 0deg;
+    --border-size: 4px;
+    position: relative;
+    display: block;
+    padding: 12px 24px;
+    color: var(--white);
+    background-color: var(--purple-card-background);
+    border: var(--border-size) solid var(--purple-card-stroke);
+    border-radius: 16px;
+    max-width: 480px;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.25rem;
+    isolation: isolate;
+    overflow: visible;
+    transition:
+      transform 200ms ease,
+      box-shadow 250ms ease;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--border-size));
+    z-index: -1;
+    border-radius: inherit;
+    padding: var(--border-size);
+    pointer-events: none;
+
+    background: conic-gradient(
+      from var(--angle),
+      var(--user-card-primary),
+      var(--user-card-accent),
+      var(--user-card-primary),
+      var(--user-card-accent)
+    );
+
+    filter: blur(22px);
+    opacity: 0;
+    transition: opacity 350ms ease;
+    animation: aura-spin 4s ease-in-out infinite;
+
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px rgb(255 255 255 / 0.12);
+  }
+
+  .button:hover::after {
+    opacity: 0.9;
+  }
+
+  @keyframes aura-spin {
+    to {
+      --angle: 360deg;
+    }
+  }
+  @media print {
+    .button {
+      display: none;
+    }
+  }
+}

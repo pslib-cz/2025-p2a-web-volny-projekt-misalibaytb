@@ -17,7 +17,33 @@
             integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../assets/styles/main.css" />
+        <link rel="stylesheet" href="https://misaliba.eu/assets/styles/main.css" />
+        <link rel="stylesheet" href="https://misaliba.eu/assets/styles/skills.css" />
+        <meta
+            name="description"
+            content="Personal portfolio of misaliba, a developer from Czechia studying Web Apps & Multimedia at pslib.cz and building projects with Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
+
+        <meta name="keywords" content="misaliba, developer, portfolio, Go, TypeScript, React, PostgreSQL, Redis, Docker, pslib, Czechia" />
+
+        <meta name="author" content="misaliba" />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="misaliba — Developer Portfolio" />
+        <meta
+            property="og:description"
+            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
+        <meta property="og:url" content="https://misaliba.eu" />
+        <meta property="og:image" content="https://misaliba.eu/assets/images/avatar-886w.webp" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="misaliba — Developer Portfolio" />
+        <meta
+            name="twitter:description"
+            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
+        <meta name="twitter:image" content="https://misaliba.eu/assets/images/avatar-886w.webp" />
+
+        <link rel="canonical" href="https://misaliba.eu" />
     </head>
 
     <body>
@@ -35,20 +61,21 @@
                             </label>
                         </div>
                         <div class="links">
-                            <a href="/"><i class="far fa-user" aria-hidden="true"></i>About</a>
-                            <a href="/skills"><i class="fas fa-bolt"></i>Skills</a>
-                            <a href="/projects"><i class="fas fa-code"></i>Projects</a>
-                            <a href="/contact"><i class="far fa-envelope"></i>Contact</a>
+                            <a href="/#home"><i class="far fa-user" aria-hidden="true"></i>About</a>
+                            <a href="#techstack"><i class="fas fa-bolt"></i>Skills</a>
+                            <a href="#projects"><i class="fas fa-code"></i>Projects</a>
+                            <a href="#contact"><i class="far fa-envelope"></i>Contact</a>
                         </div>
                     </div>
                 </nav>
+                <strong class="siteurl">https://misaliba.eu/</strong>
             </header>
 
             <main role="main">
                 <section class="home" aria-labelledby="home-heading">
                     <div class="container">
                         <article>
-                            <article class="user-card">
+                            <aside class="user-card">
                                 <header class="user-card__wrapper">
                                     <div class="banner" aria-hidden="true"></div>
                                     <figure class="avatar-frame">
@@ -56,23 +83,23 @@
                                             ><source
                                                 type="image/avif"
                                                 srcset="
-                                                    ../assets/images/avatar-120w.avif 120w,
-                                                    ../assets/images/avatar-180w.avif 180w,
-                                                    ../assets/images/avatar-240w.avif 240w,
-                                                    ../assets/images/avatar-360w.avif 360w
+                                                    https://misaliba.eu/assets/images/avatar-120w.avif 120w,
+                                                    https://misaliba.eu/assets/images/avatar-180w.avif 180w,
+                                                    https://misaliba.eu/assets/images/avatar-240w.avif 240w,
+                                                    https://misaliba.eu/assets/images/avatar-360w.avif 360w
                                                 "
                                                 sizes="120px" />
                                             <source
                                                 type="image/webp"
                                                 srcset="
-                                                    ../assets/images/avatar-120w.webp 120w,
-                                                    ../assets/images/avatar-180w.webp 180w,
-                                                    ../assets/images/avatar-240w.webp 240w,
-                                                    ../assets/images/avatar-360w.webp 360w
+                                                    https://misaliba.eu/assets/images/avatar-120w.webp 120w,
+                                                    https://misaliba.eu/assets/images/avatar-180w.webp 180w,
+                                                    https://misaliba.eu/assets/images/avatar-240w.webp 240w,
+                                                    https://misaliba.eu/assets/images/avatar-360w.webp 360w
                                                 "
                                                 sizes="120px" />
                                             <img
-                                                src="../assets/images/avatar-360w.webp"
+                                                src="https://misaliba.eu/assets/images/avatar-360w.webp"
                                                 alt="misaliba's profile picture"
                                                 class="avatar"
                                                 loading="lazy"
@@ -83,9 +110,9 @@
                                     </figure>
                                     <section class="bio" aria-labelledby="user-card-username">
                                         <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
-                                        <p class="name">misaliba · she/him</p>
+                                        <p class="name">misaliba · he/him</p>
                                         <p class="yap">
-                                            Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending PSLIB.CZ high school.
+                                            Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending pslib.cz high school.
                                         </p>
                                         <p class="yap">I have a passion for working on low-level projects, including my own operating system.</p>
                                         <p class="yap">
@@ -98,7 +125,7 @@
                                         </p>
                                     </section>
                                 </header>
-                            </article>
+                            </aside>
                         </article>
                     </div>
                 </section>

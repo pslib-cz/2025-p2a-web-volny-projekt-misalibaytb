@@ -37,7 +37,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 | GitHub Pages (live)             | [`https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb`](https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb) |
 | Grafický manuál (Figma / Canva) | [`figmička`](https://www.figma.com/design/rRu9OZvp7D6qEb4vGKCI03/L%C3%ADbalMichal?node-id=14-166&t=vM4cCAPyTjtN33jT-0)                   |
 | Grafický návrh webu (Figma)     | [`figmička`](https://www.figma.com/design/rRu9OZvp7D6qEb4vGKCI03/L%C3%ADbalMichal?node-id=14-166&t=vM4cCAPyTjtN33jT-0)                   |
-| Fotografie / média              | [`/public/assets`](/public/assets/images/)                                                                                               |
+| Fotografie / média              | [`/public/assets/images`](/public/assets/images/)                                                                                        |
 
 ---
 
@@ -47,15 +47,15 @@ The project merges components from `components/` with source files from `public/
 
 To run the script, install `ffmpeg-full` and all required Node modules. Then run:
 
-    bun ./index.ts
+    node ./index.js
 
 For continuous rebuilds when files change, use:
 
-    bun ./index.ts watch
+    node ./index.js watch
 
 To inspect how image sizes are generated, add the `--debug-images` flag:
 
-    bun ./index.ts --debug-images
+    node ./index.js --debug-images
 
 Images are mainly generated as AVIF, with WebP used as a fallback. The script determines the maximum image size and generates variants for different DPI settings.
 

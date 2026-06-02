@@ -1,0 +1,112 @@
+@layer component {
+  .user-card {
+    display: flex;
+    max-width: 380px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 4px solid var(--user-card-card);
+    background: var(--user-card-card);
+    position: relative;
+    overflow: hidden;
+    padding: 4px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .user-card__wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .user-card .banner {
+    background-color: var(--user-card-primary);
+    width: 100%;
+    height: 80px;
+  }
+  .user-card .avatar-frame {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    width: 120px;
+    height: 120px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 4px;
+    background: var(--user-card-profile-picture-stroke);
+    overflow: hidden;
+    margin: 0;
+  }
+  .user-card .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .user-card .bio {
+    width: 100%;
+    background: var(--user-card-inner-card);
+    padding: 16px;
+    padding-top: 78px; /* 60px so ve get far away form picture and 18px is padding */
+    margin-top: 0;
+  }
+  .user-card .bio .username {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    z-index: 0;
+    border: 2px #00ff5e;
+    margin: 0;
+  }
+
+  .user-card .bio .username::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* color: transparent; */
+    -webkit-text-stroke: 3px var(--user-card-username-stroke);
+  }
+
+  .user-card .bio .name {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--white);
+    display: block;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  .user-card .bio .yap {
+    margin-top: 0;
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+  }
+  @media print {
+    /* .user-card * {
+      color: unset;
+      color: #000000;
+    }
+    .user-card .bio .username::before {
+      all: unset;
+    }
+
+    .user-card section {
+      break-before: initial;
+    } */
+    .user-card {
+      display: none;
+    }
+  }
+}
