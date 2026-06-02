@@ -85,8 +85,12 @@
     .hero .meta-bar {
       display: none;
     }
-    .hero .intro {
-      color: #000000;
+    .hero .intro,
+    .hero,
+    .hero .lead {
+      color: #000000 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
   }
 }
