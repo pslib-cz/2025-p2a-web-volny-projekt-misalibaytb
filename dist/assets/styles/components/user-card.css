@@ -94,9 +94,10 @@
     font-size: 14px;
   }
   @media print {
-    /* .user-card * {
-      color: unset;
+    .user-card * {
       color: #000000;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
     .user-card .bio .username::before {
       all: unset;
@@ -104,9 +105,6 @@
 
     .user-card section {
       break-before: initial;
-    } */
-    .user-card {
-      display: none;
     }
   }
 }
