@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>misaliba — Developer Portfolio</title>
+
         <link rel="stylesheet" href="../assets/styles/main.css">
+        <link rel="stylesheet" href="../assets/styles/home.css">
         <link rel="stylesheet" href="../assets/styles/skills.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +74,7 @@
 
         <link rel="sitemap" href="../sitemap.xml">
         <script src="../assets/scripts/scroll.js" defer></script>
+        <script src="../assets/scripts/skill.js" defer></script>
         <link rel="icon" type="image/x-icon" href="../favicon.ico">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
@@ -122,45 +125,432 @@
             </header>
 
             <main>
-                <section class="home" aria-labelledby="home-heading">
-                    <div class="container">
-                        <article>
-                            <article class="user-card" aria-labelledby="profile-heading">
-                                <div class="user-card__wrapper">
-                                    <div class="banner" aria-hidden="true"></div>
-                                    <figure class="avatar-frame">
-                                        <picture>
-                                            <source type="image/avif" srcset="../assets/images/avatar-120w.avif 120w, ../assets/images/avatar-180w.avif 180w, ../assets/images/avatar-240w.avif 240w, ../assets/images/avatar-360w.avif 360w" sizes="120px">
-                                            <source type="image/webp" srcset="../assets/images/avatar-120w.webp 120w, ../assets/images/avatar-180w.webp 180w, ../assets/images/avatar-240w.webp 240w, ../assets/images/avatar-360w.webp 360w" sizes="120px">
-                                            <img
-                                                src="../assets/images/avatar-360w.webp"
-                                                alt="misaliba's profile picture"
-                                                class="avatar"
-                                                loading="lazy"
-                                                decoding="async"
-                                                width="886"
-                                                height="886">
-                                        </picture>
-                                    </figure>
-                                    <div class="bio">
-                                        <p class="username" id="profile-heading" data-text="qt misaliba">qt misaliba</p>
-                                        <p class="name">misaliba · he/him</p>
-                                        <p class="yap">
-                                            Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending pslib.cz high school.
-                                        </p>
-                                        <p class="yap">I have a passion for working on low-level projects, including my own operating system.</p>
-                                        <p class="yap">
-                                            However, I also enjoy building infrastructure-focused systems, such as custom container orchestrators and reverse
-                                            proxies.
-                                        </p>
-                                        <p class="yap">
-                                            Currently, I’m primarily creating projects to gain a deeper understanding of how things work under the hood and how
-                                            different components interact before embarking on more significant and serious projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </article>
+                <section class="techstack" id="techstack" aria-labelledby="tech-heading">
+                    <div class="container hero">
+                        <p class="meta">02 — SKILLS</p>
+                        <h2 class="intro" id="tech-heading">Technologies I use</h2>
+                        <p class="lead">List of technologies I use for building projects, and I’m open to learning new ones.</p>
+                        <ul class="skills-list" aria-label="Technology skill levels">
+                            <li class="skill-slider-group">
+                                <input
+                                    id="languages"
+                                    class="skill-slider-group-toggle"
+                                    type="checkbox"
+                                    aria-label="Toggle Languages"
+                                    aria-controls="languages-list"
+                                    checked>
+                                <label class="skill-slider-group-header" for="languages">
+                                    <span class="skill-slider-group-name">Languages</span>
+                                    <span class="more">+8 more</span>
+                                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                </label>
+                                <ul id="languages-list" class="skill-slider-group-list">
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-cuttlefish"></i>
+                                                <span class="skill-slider__name">C/C++</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">78%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="78">78%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-html5"></i>
+                                                <span class="skill-slider__name">HTML</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">40%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="40">40%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-css3-alt"></i>
+                                                <span class="skill-slider__name">CSS</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">30%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="30">30%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-js"></i>
+                                                <span class="skill-slider__name">Javascript</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">92%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="92">92%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-code"></i>
+                                                <span class="skill-slider__name">Typescript</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">92%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="92">92%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-database"></i>
+                                                <span class="skill-slider__name">SQL</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">76%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="76">76%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-golang"></i>
+                                                <span class="skill-slider__name">Go</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">64%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="64">64%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-java"></i>
+                                                <span class="skill-slider__name">Java</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">74%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="74">74%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-php"></i>
+                                                <span class="skill-slider__name">Php</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">22%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="22">22%</meter>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="skill-slider-group">
+                                <input
+                                    id="frameworks"
+                                    class="skill-slider-group-toggle"
+                                    type="checkbox"
+                                    aria-label="Toggle Frameworks"
+                                    aria-controls="frameworks-list">
+                                <label class="skill-slider-group-header" for="frameworks">
+                                    <span class="skill-slider-group-name">Frameworks</span>
+                                    <span class="more">+6 more</span>
+                                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                </label>
+                                <ul id="frameworks-list" class="skill-slider-group-list">
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-react"></i>
+                                                <span class="skill-slider__name">React</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">55%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="55">55%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-react"></i>
+                                                <span class="skill-slider__name">Vite</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">54%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="54">54%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-node-js"></i>
+                                                <span class="skill-slider__name">Node.js</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">75%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="75">75%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-compass"></i>
+                                                <span class="skill-slider__name">React Router</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">83%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="83">83%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-compass"></i>
+                                                <span class="skill-slider__name">Express.js</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">95%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="95">95%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-wind"></i>
+                                                <span class="skill-slider__name">Tailwind CSS</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">20%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="20">20%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-laravel"></i>
+                                                <span class="skill-slider__name">Laravel</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">10%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="10">10%</meter>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="skill-slider-group">
+                                <input
+                                    id="technologies"
+                                    class="skill-slider-group-toggle"
+                                    type="checkbox"
+                                    aria-label="Toggle Technologies"
+                                    aria-controls="technologies-list">
+                                <label class="skill-slider-group-header" for="technologies">
+                                    <span class="skill-slider-group-name">Technologies</span>
+                                    <span class="more">+6 more</span>
+                                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                </label>
+                                <ul id="technologies-list" class="skill-slider-group-list">
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-linux"></i>
+                                                <span class="skill-slider__name">Linux</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">80%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="80">80%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-apple"></i>
+                                                <span class="skill-slider__name">Mac OS</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">21%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="21">21%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-windows"></i>
+                                                <span class="skill-slider__name">Windows</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">56%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="56">56%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-database"></i>
+                                                <span class="skill-slider__name">PostgreSQL</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">43%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="43">43%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-server"></i>
+                                                <span class="skill-slider__name">Redis</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">40%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="40">40%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-cloud"></i>
+                                                <span class="skill-slider__name">Cloudflare</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">10%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="10">10%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-discord"></i>
+                                                <span class="skill-slider__name">Discord API</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">30%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="30">30%</meter>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="skill-slider-group">
+                                <input id="tools" class="skill-slider-group-toggle" type="checkbox" aria-label="Toggle Tools" aria-controls="tools-list">
+                                <label class="skill-slider-group-header" for="tools">
+                                    <span class="skill-slider-group-name">Tools</span>
+                                    <span class="more">+7 more</span>
+                                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                </label>
+                                <ul id="tools-list" class="skill-slider-group-list">
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-git"></i>
+                                                <span class="skill-slider__name">Git</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">30%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="30">30%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-code"></i>
+                                                <span class="skill-slider__name">VS Code</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">70%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="70">70%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-github"></i>
+                                                <span class="skill-slider__name">Github</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">78%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="78">78%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-gitlab"></i>
+                                                <span class="skill-slider__name">Gitlab</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">21%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="21">21%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-docker"></i>
+                                                <span class="skill-slider__name">Docker</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">32%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="32">32%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-windows"></i>
+                                                <span class="skill-slider__name">Windows Active Directory</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">10%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="10">10%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-earth-europe"></i>
+                                                <span class="skill-slider__name">LDAP</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">15%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="15">15%</meter>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="skill-slider-group">
+                                <input
+                                    id="application-development"
+                                    class="skill-slider-group-toggle"
+                                    type="checkbox"
+                                    aria-label="Toggle Application Development"
+                                    aria-controls="application-development-list">
+                                <label class="skill-slider-group-header" for="application-development">
+                                    <span class="skill-slider-group-name">Application Development</span>
+                                    <span class="more">+3 more</span>
+                                    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+                                </label>
+                                <ul id="application-development-list" class="skill-slider-group-list">
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-apple"></i>
+                                                <span class="skill-slider__name">Apple</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">2%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="2">2%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-android"></i>
+                                                <span class="skill-slider__name">Android</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">20%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="20">20%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fab fa-html5"></i>
+                                                <span class="skill-slider__name">Progressive Web Applications (PWA)</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">50%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="50">50%</meter>
+                                    </li>
+                                    <li class="skill-slider">
+                                        <div class="skill-slider__top">
+                                            <h3 class="skill-slider__title">
+                                                <i aria-hidden="true" class="skill-slider__icon fas fa-tv"></i>
+                                                <span class="skill-slider__name">Tizen</span>
+                                            </h3>
+                                            <strong class="skill-slider__value">0%</strong>
+                                        </div>
+                                        <meter class="skill-slider__bar" min="0" max="100" value="0">0%</meter>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class="button" href="/skills">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            Interested? Contact me!
+                        </a>
                     </div>
                 </section>
             </main>

@@ -1,0 +1,172 @@
+@layer component {
+  .techstack {
+    min-height: 100vh;
+    padding-block: 2rem 3rem;
+  }
+
+  .techstack .hero {
+    max-width: 620px;
+  }
+
+  @media screen and (min-width: 900px) {
+    .techstack {
+      padding-block: 4rem 5rem;
+    }
+
+    .techstack .hero {
+      display: grid;
+      grid-template-columns: minmax(20rem, 0.8fr) minmax(0, 1.2fr);
+      column-gap: clamp(2rem, 5vw, 4.5rem);
+      row-gap: 1.25rem;
+      align-items: start;
+      max-width: 1320px;
+      padding-block: 4rem;
+    }
+
+    .techstack .meta,
+    .techstack .intro,
+    .techstack .lead,
+    .techstack misaliba-button,
+    .techstack .button {
+      grid-column: 1;
+    }
+
+    .techstack .button {
+      justify-self: start;
+      margin-inline: 0;
+    }
+
+    .techstack .intro {
+      max-width: 9ch;
+      font-size: clamp(3rem, 4.2vw, 4.5rem);
+      line-height: 1;
+      overflow-wrap: normal;
+    }
+
+    .techstack .lead {
+      max-width: 24rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .techstack .skills-list {
+      display: grid;
+      grid-column: 2;
+      grid-row: 1 / span 5;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+      align-items: start;
+      gap: 1rem;
+      width: 100%;
+      margin: 0;
+    }
+
+    .techstack .skill-slider-group {
+      min-width: 0;
+      padding: 1.125rem;
+      border: 1px solid var(--card-stroke);
+      border-radius: 8px;
+      background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--card-background) 92%, var(--blue)),
+        var(--card-background)
+      );
+      box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.18);
+    }
+
+    .techstack .skill-slider-group:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .techstack .skill-slider-group-header {
+      margin-block-end: 1rem;
+    }
+
+    .techstack .skill-slider-group-header span:not(.sr-only, .more) {
+      font-size: 1.1rem;
+    }
+
+    .techstack .skill-slider-group:first-child .skill-slider-group-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0fr);
+      column-gap: 0;
+      transition:
+        grid-template-columns 0.35s ease,
+        column-gap 0.35s ease;
+    }
+
+    .techstack
+      .skill-slider-group:first-child:has(.skill-slider-group-toggle:checked)
+      .skill-slider-group-list {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: 0.75rem;
+    }
+
+    .techstack .skill-slider {
+      padding: 0.8rem;
+      border: 1px solid color-mix(in srgb, var(--card-stroke) 70%, transparent);
+      border-radius: 8px;
+      background: color-mix(
+        in srgb,
+        var(--background) 62%,
+        var(--card-background)
+      );
+    }
+
+    .techstack .skill-slider-group ul li:not(:first-child) {
+      padding-block: 0;
+      border-block-width: 0;
+    }
+
+    .techstack .skill-slider-group ul li:first-child,
+    .techstack
+      .skill-slider-group
+      .skill-slider-group-toggle:checked
+      ~ ul
+      li:not(:first-child) {
+      max-height: 12rem;
+      padding-block: 0.8rem;
+      border-block-width: 1px;
+    }
+
+    .techstack .skill-slider__top {
+      gap: 0.75rem;
+    }
+
+    .techstack .skill-slider__title {
+      gap: 0.65rem;
+    }
+
+    .techstack .skill-slider__icon {
+      flex: 0 0 auto;
+      width: 1.15rem;
+      color: color-mix(in srgb, var(--white) 82%, var(--blue));
+      text-align: center;
+    }
+
+    .techstack .skill-slider__name {
+      overflow-wrap: anywhere;
+      font-size: 0.82rem;
+      line-height: 1.25;
+    }
+
+    .techstack .skill-slider__value {
+      font-size: 0.86rem;
+    }
+
+    .techstack .skill-slider__bar {
+      height: 0.5rem;
+      margin-top: 0.7rem;
+      box-shadow: none;
+    }
+
+    .techstack .skill-slider__bar::-webkit-meter-bar {
+      height: 0.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1180px) {
+    .techstack .hero {
+      grid-template-columns: minmax(24rem, 0.78fr) minmax(0, 1.22fr);
+    }
+  }
+}

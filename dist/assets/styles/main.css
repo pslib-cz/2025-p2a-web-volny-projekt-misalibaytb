@@ -155,7 +155,7 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    padding: 16px 16px;
+    padding: 1rem 1rem;
   }
 
   ul,
@@ -185,9 +185,6 @@
     strong,
     span {
       color: #000000;
-    }
-    main section {
-      break-after: page;
     }
   }
 }

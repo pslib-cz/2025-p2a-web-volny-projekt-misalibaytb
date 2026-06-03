@@ -4,18 +4,18 @@
     max-width: 380px;
     width: 100%;
     flex-direction: column;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background: var(--user-card-card);
     position: relative;
     overflow: hidden;
-    padding: 4px;
+    padding: 0.25rem;
     flex: 0 0 min(100%, 380px);
   }
 
   .user-card__wrapper {
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     overflow: hidden;
   }
   .user-card .banner {
@@ -31,7 +31,7 @@
     height: 120px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    padding: 4px;
+    padding: 0.25rem;
     background: var(--user-card-profile-picture-stroke);
     overflow: hidden;
     margin: 0;
@@ -47,14 +47,14 @@
   .user-card .bio {
     width: 100%;
     background: var(--user-card-inner-card);
-    padding: 16px;
-    padding-top: 78px; /* 60px so ve get far away form picture and 18px is padding */
+    padding: 1rem;
+    padding-top: 4.875rem; /* 60px so ve get far away form picture and 18px is padding */
     margin-top: 0;
   }
   .user-card .bio .username {
     position: relative;
     font-family: "Pixelify Sans", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     font-style: normal;
     color: var(--white);
@@ -68,26 +68,32 @@
     inset: 0;
     z-index: -1;
     /* color: transparent; */
-    -webkit-text-stroke: 3px var(--user-card-username-stroke);
+    -webkit-text-stroke: 0.1875rem var(--user-card-username-stroke);
   }
 
   .user-card .bio .name {
     font-family: "DM Sans", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 300;
     color: var(--white);
     display: block;
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   .user-card .bio .yap {
     margin-top: 0;
     color: var(--white);
     font-family: "DM Sans", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   @media print {
+    .user-card {
+      break-after: page;
+      page-break-after: always;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
     .user-card * {
       color: #000000;
       -webkit-print-color-adjust: exact;
@@ -95,10 +101,6 @@
     }
     .user-card .bio .username::before {
       all: unset;
-    }
-
-    .user-card section {
-      break-before: initial;
     }
   }
 }

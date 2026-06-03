@@ -1,9 +1,9 @@
 @layer component {
   .skillcard {
     background-color: var(--card-background);
-    border-radius: 16px;
-    border: 2px solid var(--card-stroke);
-    padding: 16px;
+    border-radius: 1rem;
+    border: 0.125rem solid var(--card-stroke);
+    padding: 1rem;
     width: 100%;
 
     display: grid;

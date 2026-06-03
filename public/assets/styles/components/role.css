@@ -4,10 +4,10 @@
     font-size: 0.875rem;
     font-weight: 600;
     background-color: var(--this-background, var(--card-background));
-    border: 2px solid var(--this-stroke, var(--card-stroke));
-    border-radius: 8px;
+    border: 0.125rem solid var(--this-stroke, var(--card-stroke));
+    border-radius: 0.5rem;
     width: fit-content;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     color: var(--this-text, var(--text));
   }
 }

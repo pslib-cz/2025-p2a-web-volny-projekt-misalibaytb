@@ -1,0 +1,13 @@
+[component:skill-slider-group;id,title,more,&sliders,open=false]
+<li class="skill-slider-group">
+    <input id="{id}" class="skill-slider-group-toggle" type="checkbox" aria-label="Toggle {title}"
+        aria-controls="{id}-list" checked="{open}">
+    <label class="skill-slider-group-header" for="{id}">
+        <span class="skill-slider-group-name">{title}</span>
+        <span class="more">{more}</span>
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </label>
+    <ul id="{id}-list" class="skill-slider-group-list">
+        {sliders}
+    </ul>
+</li>

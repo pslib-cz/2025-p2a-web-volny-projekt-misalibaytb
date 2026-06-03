@@ -1,0 +1,118 @@
+@layer component {
+  .skill-slider-group {
+    padding: 1rem 0;
+  }
+
+  .skill-slider-group-toggle {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .skill-slider-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    inline-size: 100%;
+    margin-block-end: 0.5rem;
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .skill-slider-group-header span:not(.sr-only, .more) {
+    margin-inline-end: auto;
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .skill-slider-group-header .more {
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .skill-slider-group ul li:first-child {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 10rem;
+    margin-block: var(--this-margin, 0.5rem);
+    visibility: visible;
+    overflow: hidden;
+    pointer-events: auto;
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      max-height 0.35s ease,
+      margin 0.35s ease,
+      padding 0.35s ease,
+      border-width 0.35s ease;
+  }
+
+  .skill-slider-group ul li:not(:first-child) {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    max-height: 0;
+    margin-block: 0;
+    visibility: hidden;
+    overflow: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      max-height 0.35s ease,
+      margin 0.35s ease,
+      padding 0.35s ease,
+      border-width 0.35s ease,
+      visibility 0s linear 0.35s;
+  }
+
+  .skill-slider-group
+    .skill-slider-group-toggle:checked
+    ~ ul
+    li:not(:first-child) {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 10rem;
+    margin-block: var(--this-margin, 0.5rem);
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      max-height 0.35s ease,
+      margin 0.35s ease,
+      padding 0.35s ease,
+      border-width 0.35s ease,
+      visibility 0s linear 0s;
+  }
+
+  .skill-slider-group-header i {
+    color: var(--text);
+    font-size: 1.125rem;
+    line-height: 1;
+    transform: rotate(180deg);
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .skill-slider-group-toggle:checked + .skill-slider-group-header i {
+    color: var(--pink);
+    transform: rotate(0deg);
+  }
+}
