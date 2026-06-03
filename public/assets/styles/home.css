@@ -6,6 +6,10 @@
     max-width: 620px;
     margin: auto;
   }
+  .home {
+    min-height: 100vh;
+    align-content: center;
+  }
   .hero .meta {
     display: flex;
     align-items: center;

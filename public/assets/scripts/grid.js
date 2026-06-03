@@ -24,3 +24,33 @@ if (skillcards) {
   updateAloneSkillCard();
   window.addEventListener("resize", updateAloneSkillCard);
 }
+const skillBars = document.querySelectorAll(".skill-slider__bar");
+
+const skillObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      requestAnimationFrame(() => {
+        entry.target.classList.add("is-filled");
+      });
+
+      skillObserver.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.35,
+  },
+);
+
+skillBars.forEach((bar, index) => {
+  bar.style.setProperty("--skill-fill-delay", `${index * 0.4}s`);
+});
+
+window.addEventListener("load", () => {
+  skillBars.forEach((bar) => {
+    skillObserver.observe(bar);
+  });
+});

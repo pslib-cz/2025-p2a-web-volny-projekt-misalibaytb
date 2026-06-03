@@ -464,6 +464,7 @@
     box-shadow: 0 0 8px rgb(209 184 255 / 0.35);
     overflow: hidden;
     appearance: none;
+    --skill-fill-scale: 0;
   }
   .skill-slider__bar::-webkit-meter-bar {
     height: 0.7rem;
@@ -475,17 +476,31 @@
   .skill-slider__bar::-webkit-meter-optimum-value {
     border-radius: 999px;
     background: linear-gradient(90deg, var(--blue), #d1b8ff);
+    transform: scaleX(var(--skill-fill-scale));
+    transform-origin: left center;
+    transition: transform 3s ease var(--skill-fill-delay, 0s);
   }
 
   .skill-slider__bar::-webkit-meter-suboptimum-value {
     border-radius: 999px;
     background: linear-gradient(90deg, var(--blue), #d1b8ff);
+    transform: scaleX(var(--skill-fill-scale));
+    transform-origin: left center;
+    transition: transform 3s ease var(--skill-fill-delay, 0s);
   }
 
   .skill-slider__bar::-webkit-meter-even-less-good-value {
     border-radius: 999px;
     background: linear-gradient(90deg, var(--blue), #d1b8ff);
+    transform: scaleX(var(--skill-fill-scale));
+    transform-origin: left center;
+    transition: transform 3s ease var(--skill-fill-delay, 0s);
   }
+
+  .skill-slider__bar.is-filled {
+    --skill-fill-scale: 1;
+  }
+
   @media print {
     .skill-slider__icon,
     .skill-slider__name,
@@ -705,6 +720,10 @@
     width: 100%;
     max-width: 620px;
     margin: auto;
+  }
+  .home {
+    min-height: 100vh;
+    align-content: center;
   }
   .hero .meta {
     display: flex;
