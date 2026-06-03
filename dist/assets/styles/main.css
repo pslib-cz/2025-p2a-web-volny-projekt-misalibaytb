@@ -9,6 +9,7 @@
     --gray: #979797;
     --blue: #4f91f8;
     --yellow: #f9b31d;
+    --orange: #ff8a1d;
     --pink: #fc6fd3;
     --purple: #9571f8;
     --green: #00ff5e;
@@ -72,16 +73,20 @@
     --purple-card-stroke: #2e2549;
 
     /* Blue Card */
-    --blue-card-background: #2e4873;
-    --blue-card-stroke: #1b202b;
+    --blue-card-background: #1b202b;
+    --blue-card-stroke: #2e4873;
 
     /* Yellow Card */
-    --yellow-card-background: #71561b;
-    --yellow-card-stroke: #28231a;
+    --yellow-card-stroke: #71561b;
+    --yellow-card-background: #28231a;
+
+    /* Orange Card */
+    --orange-card-background: #2b1d14;
+    --orange-card-stroke: #73462e;
 
     /* Pink Card */
-    --pink-card-background: #733b65;
-    --pink-card-stroke: #291e29;
+    --pink-card-background: #291e29;
+    --pink-card-stroke: #733b65;
   }
   *,
   *::before,
@@ -125,13 +130,16 @@
     font-size: 1rem;
   }
   a {
-    text-decoration: unset;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     color: var(--text-hyperlink);
+    text-decoration-line: underline;
     text-decoration-style: dashed;
-    transition: 0.3s ease-in-out;
+    text-underline-offset: 0.18em;
+    transition:
+      color 0.3s ease-in-out,
+      text-shadow 0.3s ease-in-out;
   }
   a:hover {
     color: var(--text-hyperlink-hover);
@@ -148,6 +156,22 @@
     width: 100%;
     margin: auto;
     padding: 16px 16px;
+  }
+
+  ul,
+  ol,
+  menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
   @media print {
     h1,

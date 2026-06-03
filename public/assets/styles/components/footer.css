@@ -1,4 +1,4 @@
-@layer base {
+@layer component {
   footer {
     width: 100%;
     color: var(--white);

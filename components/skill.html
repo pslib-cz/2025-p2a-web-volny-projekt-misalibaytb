@@ -1,13 +1,13 @@
 [component:skill-slider;value,name,icon]
-<div class="skill-slider">
+<li class="skill-slider">
     <div class="skill-slider__top">
-        <div class="skill-slider__title">
-            <i class="skill-slider__icon {icon}"></i>
-            <p class="skill-slider__name">{name}</p>
-        </div>
-        <strong class="skill-slider__value">{value}</strong>
+        <h3 class="skill-slider__title">
+            <i aria-hidden="true" class="skill-slider__icon {icon}"></i>
+            <span class="skill-slider__name">{name}</span>
+        </h3>
+        <strong class="skill-slider__value">{value}%</strong>
     </div>
-    <div class="skill-slider__bar">
-        <div class="skill-slider__fill" style="--percentage: {value};"></div>
-    </div>
-</div>
+    <meter class="skill-slider__bar" min="0" max="100" value="{value}">
+        {value}%
+    </meter>
+</li>

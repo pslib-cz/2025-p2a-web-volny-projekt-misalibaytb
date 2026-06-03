@@ -1,5 +1,5 @@
-[component:button;icon,text,href]
-<a class="button" href="{href}">
-    <i class="{icon}"></i>
+[component:button;icon,text,href,*aria-label]
+<a class="button" href="{href}" [aria-label]>
+    <i class="{icon}" aria-hidden="true"></i>
     {text}
 </a>

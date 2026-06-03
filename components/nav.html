@@ -1,25 +1,34 @@
 [component:navbar]
-<script src="/assets/scripts/scroll.js" defer async></script>
-<nav id="nav">
+<nav id="nav" aria-label="Main navigation">
     <div class="container">
         <div class="head">
-            <a href="/">misaliba</a>
-            <input id="hamburger-toggle" class="hamburger-toggle" type="checkbox" />
-            <label class="hamburger" for="hamburger-toggle" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="/" aria-label="misaliba homepage">misaliba</a>
+            <input id="hamburger-toggle" class="hamburger-toggle" type="checkbox" aria-label="Toggle navigation menu"
+                aria-controls="primary-navigation">
+            <label class="hamburger" for="hamburger-toggle">
+                <span class="sr-only">Toggle navigation menu</span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
             </label>
         </div>
-        <div class="links">
-            <a href="/#home"><i class="far fa-user" aria-hidden="true"></i>About</a>
-            <a href="/#techstack"><i class="fas fa-bolt"></i>Skills</a>
-            <a href="/#projects"><i class="fas fa-code"></i>Projects</a>
-            <a href="/#contact"><i class="far fa-envelope"></i>Contact</a>
-        </div>
+        <menu class="links" id="primary-navigation">
+            <li>
+                <a href="/#home"><i class="far fa-user" aria-hidden="true"></i>About</a>
+            </li>
+            <li>
+                <a href="/#techstack"><i class="fas fa-bolt" aria-hidden="true"></i>Skills</a>
+            </li>
+            <li>
+                <a href="/#projects"><i class="fas fa-code" aria-hidden="true"></i>Projects</a>
+            </li>
+            <li>
+                <a href="/#contact"><i class="far fa-envelope" aria-hidden="true"></i>Contact</a>
+            </li>
+        </menu>
     </div>
 </nav>
 <strong class="siteurl ">https://misaliba.eu/</strong>
-<a href="#nav" class="scroll">
-    <i class="fas fa-arrow-up"></i>
+<a href="#nav" class="scroll" aria-label="Scroll to top of page">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
 </a>

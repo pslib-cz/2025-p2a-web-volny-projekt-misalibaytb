@@ -1,6 +1,6 @@
-[component:experience-card;type,&value,name,time,icon]
+[component:experience-card;*type,&value,name,time,icon]
 <div class="experiencecard">
-    <i class="{icon}"></i>
+    <i class="{icon}" aria-hidden="true"></i>
     <div class="content">
         <p class="name">{name}</p>
         <strong>{value}</strong>
@@ -9,7 +9,7 @@
 </div>
 (type=dead)
 <div class="experiencecard inactive">
-    <i class="{icon}"></i>
+    <i class="{icon}" aria-hidden="true"></i>
     <div class="content">
         <p class="name">{name}</p>
         <strong>{value}</strong>

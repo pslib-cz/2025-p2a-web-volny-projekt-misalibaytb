@@ -1,13 +1,13 @@
 [component:user-card]
-<aside class="user-card">
-    <header class="user-card__wrapper">
+<article class="user-card" aria-labelledby="profile-heading">
+    <div class="user-card__wrapper">
         <div class="banner" aria-hidden="true"></div>
         <figure class="avatar-frame">
             <img src="/assets/images/avatar.jpeg" alt="misaliba's profile picture" class="avatar" loading="lazy"
                 decoding="async">
         </figure>
-        <section class="bio" aria-labelledby="user-card-username">
-            <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
+        <div class="bio">
+            <p class="username" id="profile-heading" data-text="qt misaliba">qt misaliba</p>
             <p class="name">misaliba · he/him</p>
             <p class="yap">Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending pslib.cz
                 high school.</p>
@@ -17,6 +17,6 @@
             <p class="yap">Currently, I’m primarily creating projects to gain a deeper understanding of how things work
                 under the hood and how different components interact before embarking on more significant and serious
                 projects.</p>
-        </section>
-    </header>
-</aside>
+        </div>
+    </div>
+</article>

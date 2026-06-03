@@ -1,14 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>misaliba — Developer Portfolio</title>
-    
-    <link rel="stylesheet" href="/assets/styles/main.css" />
-    <link rel="stylesheet" href="/assets/styles/home.css" />
+
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/home.css">
     <misaliba-seo />
+    <script src="/assets/scripts/grid.js" defer></script>
 </head>
 
 <body>
@@ -17,72 +18,87 @@
             <misaliba-navbar />
         </header>
 
-        <main role="main">
+        <main>
             <section class="home" id="home" aria-labelledby="home-heading">
                 <div class="container">
                     <misaliba-user-card />
-                    <article class="second">
-                        <div class="hero" aria-labelledby="intro-heading">
-                            <p class="meta"><span class="meta-bar" aria-hidden="true"></span>DEVELOPER · HE/HIM ·
-                                CZECHIA</p>
-                            <h1 class="intro" id="intro-heading">hi, i’m <strong>misaliba.</strong>
-                            </h1>
-                            <p class="lead">I’m currently pursuing a degree in <strong>Web Apps &amp;
-                                    Multimedia</strong> at <a href="https://pslib.cz">pslib.cz</a> and am working on
-                                developing an Arsenus Discord
-                                bot. My primary programming languages include Go and TypeScript, along with other
-                                technologies such as React,
-                                PostgreSQL, Redis, and Docker. In my free time, I enjoy watching anime, listening to
-                                music, and spending time with my
-                                family and friends.</p>
-                            <div class="skillcards">
-                                <misaliba-skill-card value="8+" name="years coding" />
-                                <misaliba-skill-card value="Go" name="favorite language" />
-                                <misaliba-skill-card value="React" name="favorite framework" />
-                                <misaliba-skill-card value="24/7" name="listening to music" />
-                            </div>
-                            <misaliba-experience-card name="High School" time="2024 - ongoing"
-                                icon="fa-solid fa-graduation-cap">
-                                Web Applications &amp; Multimedia - <a href="https://pslib.cz/">pslib.cz</a>
-                            </misaliba-experience-card>
-                        </div>
-                    </article>
+                    <div class="hero second">
+                        <p class=" meta"><span class="meta-bar" aria-hidden="true"></span>DEVELOPER&nbsp;· HE/HIM&nbsp;·
+                            CZECHIA
+                        </p>
+                        <h1 class="intro" id="home-heading">hi, i’m <strong>misaliba.</strong>
+                        </h1>
+                        <p class=" lead">I’m currently pursuing a degree in <strong>Web Apps &amp;
+                                Multimedia</strong> at <a href="https://pslib.cz">pslib.cz</a> and am working on
+                            developing an Arsenus Discord
+                            bot. My primary programming languages include Go and TypeScript, along with other
+                            technologies such as React,
+                            PostgreSQL, Redis, and Docker. In my free time, I enjoy watching anime, listening to
+                            music, and spending time with my
+                            family and friends.</p>
+                        <ul class="skillcards">
+                            <misaliba-skill-card value="8+" name="years coding" />
+                            <misaliba-skill-card value="Go" name="favorite language" />
+                            <misaliba-skill-card value="React" name="favorite framework" />
+                            <misaliba-skill-card value="24/7" name="listening to music" />
+                        </ul>
+                        <misaliba-experience-card name="High School" time="2024 - ongoing"
+                            icon="fa-solid fa-graduation-cap">
+                            Web Applications &amp; Multimedia - <a href="https://pslib.cz/">pslib.cz</a>
+                        </misaliba-experience-card>
+                    </div>
                 </div>
             </section>
-            <section class="techstack" id="techstack">
-                <div class="container">
-                    <article>
-                        <div class="hero" aria-labelledby="intro-heading">
-                            <p class="meta">02 — SKILLS</p>
-                            <h2 class="intro" id="intro-heading">Technologies i use</h2>
-                            <p class="lead">A concise overview of the technology stack employed in the development
-                                of my
-                                projects.</p>
-                            <misaliba-skill-slider icon="fab fa-cuttlefish" value="76%" name="C/C++" />
-                            <misaliba-skill-slider icon="fab fa-react" value="55%" name="React" />
-                            <misaliba-skill-slider icon="fab fa-linux" value="80%" name="Linux" />
-                            <misaliba-skill-slider icon="fab fa-git" value="30%" name="Git" />
-                            <misaliba-skill-slider icon="fab fa-apple" value="2%" name="Apple" />
-                            <misaliba-button icon="fas fa-arrow-right" text="See what i work with" />
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="projects" id="projects">
-                <div class="container">
-                    <article>
-                        <div class="hero" aria-labelledby="intro-heading">
-                            <p class="meta">03 — PROJECTS</p>
-                            <h2 class="intro" id="intro-heading">Built by Me</h2>
+            <section class="techstack" id="techstack" aria-labelledby="tech-heading">
+                <div class="container hero">
+                    <p class="meta">02 — SKILLS</p>
+                    <h2 class="intro" id="tech-heading">Technologies I use</h2>
+                    <p class="lead">A concise overview of the technology stack employed in the development
+                        of my
+                        projects.</p>
+                    <ul class="skills-list" aria-label="Technology skill levels">
+                        <misaliba-skill-slider icon="fab fa-cuttlefish" value="76" name="C/C++" />
+                        <misaliba-skill-slider icon="fab fa-react" value="55" name="React" />
+                        <misaliba-skill-slider icon="fab fa-linux" value="80" name="Linux" />
+                        <misaliba-skill-slider icon="fab fa-git" value="30" name="Git" />
+                        <misaliba-skill-slider icon="fab fa-apple" value="2" name="Apple" />
+                    </ul>
+                    <misaliba-button icon="fas fa-arrow-right" text="See what i work with" href="/skills" />
 
-                            <misaliba-skill-slider icon="fab fa-cuttlefish" value="76%" name="C/C++" />
-                            <misaliba-skill-slider icon="fab fa-react" value="55%" name="React" />
-                            <misaliba-skill-slider icon="fab fa-linux" value="80%" name="Linux" />
-                            <misaliba-skill-slider icon="fab fa-git" value="30%" name="Git" />
-                            <misaliba-skill-slider icon="fab fa-apple" value="2%" name="Apple" />
-                            <misaliba-button icon="fas fa-arrow-right" text="Explore a bit more" />
-                        </div>
-                    </article>
+                </div>
+            </section>
+            <section class="projects" id="projects" aria-labelledby="projects-heading">
+                <div class="container hero">
+                    <p class="meta">03 — PROJECTS</p>
+                    <h2 class="intro" id="projects-heading">Built by Me</h2>
+
+                    <ul>
+                        <misaliba-project-card type="inprogress" name="Arsenus"
+                            description="Discord bot focused on functionaliy over profitability."
+                            tags-area-label="Technologies used for Arsenus">
+                            <misaliba-role-card name="Go Lang" color="blue" />
+                            <misaliba-role-card name="React" color="yellow" />
+                            <misaliba-role-card name="TypeScript" color="purple" />
+                            <misaliba-role-card name="Arsenus Script" color="pink" />
+                            <misaliba-role-card name="PostgreSQL" color="purple" />
+                        </misaliba-project-card>
+                        <misaliba-project-card name="michlip.eu" description="Project that focuses on user privacy."
+                            tags-area-label="Technologies used for michlip.eu">
+                            <misaliba-role-card name="Go Lang" color="blue" />
+                            <misaliba-role-card name="React" color="yellow" />
+                            <misaliba-role-card name="TypeScript" color="purple" />
+                            <misaliba-role-card name="PostgreSQL" color="purple" />
+                        </misaliba-project-card>
+                        <misaliba-project-card type="live" name="misaliba.eu"
+                            description="My personal site where i present my self."
+                            tags-area-label="Technologies used for my personal portfolio">
+                            <misaliba-role-card name="TypeScript" color="blue" />
+                            <misaliba-role-card name="Javascript" color="yellow" />
+                            <misaliba-role-card name="HTML" color="orange" />
+                            <misaliba-role-card name="CSS" color="purple" />
+                        </misaliba-project-card>
+                    </ul>
+                    <misaliba-button icon="fas fa-arrow-right" text="Explore a bit more" href="/projects" />
                 </div>
             </section>
         </main>

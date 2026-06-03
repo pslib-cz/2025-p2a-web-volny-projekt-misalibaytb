@@ -1,153 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>misaliba — Developer Portfolio</title>
 
-        <link rel="stylesheet" href="https://misaliba.gambaaa.fun/assets/styles/main.css" />
-        <link rel="stylesheet" href="https://misaliba.gambaaa.fun/assets/styles/home.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+        <link rel="stylesheet" href="./assets/styles/main.css">
+        <link rel="stylesheet" href="./assets/styles/home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
         <link
             rel="preload"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap"
             as="style"
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&display=swap"
             onload="
                 this.onload = null;
                 this.rel = 'stylesheet';
-            " />
-
-        <noscript>
-            <link
-                rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&display=swap" />
-        </noscript>
+            ">
 
         <link
             rel="preload"
-            as="style"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            as="style"
             integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
             onload="
                 this.onload = null;
                 this.rel = 'stylesheet';
-            " />
+            ">
 
         <noscript>
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap">
+
             <link
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
                 integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
                 crossorigin="anonymous"
-                referrerpolicy="no-referrer" />
+                referrerpolicy="no-referrer">
         </noscript>
 
         <meta
             name="description"
-            content="Personal portfolio of misaliba, a developer from Czechia studying Web Apps & Multimedia at pslib.cz and building projects with Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
+            content="Personal portfolio of misaliba, a developer from Czechia studying Web Apps & Multimedia at pslib.cz and building projects with Go, TypeScript, React, PostgreSQL, Redis, and Docker.">
 
-        <meta name="keywords" content="misaliba, developer, portfolio, Go, TypeScript, React, PostgreSQL, Redis, Docker, pslib, Czechia" />
+        <meta name="keywords" content="misaliba, developer, portfolio, Go, TypeScript, React, PostgreSQL, Redis, Docker, pslib, Czechia">
 
-        <meta name="author" content="misaliba" />
-        <meta name="robots" content="index, follow" />
+        <meta name="author" content="misaliba">
+        <meta name="robots" content="index, follow">
 
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="misaliba — Developer Portfolio" />
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="misaliba — Developer Portfolio">
         <meta
             property="og:description"
-            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
-        <meta property="og:url" content="https://misaliba.gambaaa.fun/" />
-        <meta property="og:image" content="https://misaliba.gambaaa.fun/assets/images/avatar-886w.webp" />
+            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker.">
+        <meta property="og:url" content="https://misaliba.gambaaa.fun/">
+        <meta property="og:image" content="https://misaliba.gambaaa.fun//assets/images/avatar.jpeg">
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="misaliba — Developer Portfolio" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="misaliba — Developer Portfolio">
         <meta
             name="twitter:description"
-            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker." />
-        <meta name="twitter:image" content="https://misaliba.gambaaa.fun/assets/images/avatar-886w.webp" />
+            content="Personal portfolio of misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, and Docker.">
+        <meta name="twitter:image" content="https://misaliba.gambaaa.fun//assets/images/avatar.jpeg">
 
-        <link rel="canonical" href="https://misaliba.gambaaa.fun/" />
+        <link rel="canonical" href="https://misaliba.gambaaa.fun/">
 
-        <link rel="sitemap" href="https://misaliba.gambaaa.fun/sitemap.xml" />
-        <link rel="icon" type="image/x-icon" href="https://misaliba.gambaaa.fun/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="https://misaliba.gambaaa.fun/assets/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="https://misaliba.gambaaa.fun/assets/icons/favicon-16x16.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://misaliba.gambaaa.fun/apple-touch-icon.png" />
-        <meta name="theme-color" content="#0c0c0f" />
+        <link rel="sitemap" href="./sitemap.xml">
+        <script src="./assets/scripts/scroll.js" defer></script>
+        <script src="./assets/scripts/grid.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./apple-touch-icon.png">
+        <meta name="theme-color" content="#0c0c0f">
     </head>
 
     <body>
         <div id="root">
             <header>
-                <script src="https://misaliba.gambaaa.fun/assets/scripts/scroll.js" defer async></script>
-                <nav id="nav">
+                <nav id="nav" aria-label="Main navigation">
                     <div class="container">
                         <div class="head">
-                            <a href="/">misaliba</a>
-                            <input id="hamburger-toggle" class="hamburger-toggle" type="checkbox" />
-                            <label class="hamburger" for="hamburger-toggle" aria-label="Open menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                            <a href="/" aria-label="misaliba homepage">misaliba</a>
+                            <input
+                                id="hamburger-toggle"
+                                class="hamburger-toggle"
+                                type="checkbox"
+                                aria-label="Toggle navigation menu"
+                                aria-controls="primary-navigation">
+                            <label class="hamburger" for="hamburger-toggle">
+                                <span class="sr-only">Toggle navigation menu</span>
+                                <span class="hamburger__line"></span>
+                                <span class="hamburger__line"></span>
+                                <span class="hamburger__line"></span>
                             </label>
                         </div>
-                        <div class="links">
-                            <a href="/#home"><i class="far fa-user" aria-hidden="true"></i>About</a>
-                            <a href="/#techstack"><i class="fas fa-bolt"></i>Skills</a>
-                            <a href="/#projects"><i class="fas fa-code"></i>Projects</a>
-                            <a href="/#contact"><i class="far fa-envelope"></i>Contact</a>
-                        </div>
+                        <menu class="links" id="primary-navigation">
+                            <li>
+                                <a href="/#home"><i class="far fa-user" aria-hidden="true"></i>About</a>
+                            </li>
+                            <li>
+                                <a href="/#techstack"><i class="fas fa-bolt" aria-hidden="true"></i>Skills</a>
+                            </li>
+                            <li>
+                                <a href="/#projects"><i class="fas fa-code" aria-hidden="true"></i>Projects</a>
+                            </li>
+                            <li>
+                                <a href="/#contact"><i class="far fa-envelope" aria-hidden="true"></i>Contact</a>
+                            </li>
+                        </menu>
                     </div>
                 </nav>
                 <strong class="siteurl">https://misaliba.eu/</strong>
-                <a href="#nav" class="scroll">
-                    <i class="fas fa-arrow-up"></i>
+                <a href="#nav" class="scroll" aria-label="Scroll to top of page">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i>
                 </a>
             </header>
 
-            <main role="main">
+            <main>
                 <section class="home" id="home" aria-labelledby="home-heading">
                     <div class="container">
-                        <aside class="user-card">
-                            <header class="user-card__wrapper">
+                        <article class="user-card" aria-labelledby="profile-heading">
+                            <div class="user-card__wrapper">
                                 <div class="banner" aria-hidden="true"></div>
                                 <figure class="avatar-frame">
-                                    <picture
-                                        ><source
-                                            type="image/avif"
-                                            srcset="
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-120w.avif 120w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-180w.avif 180w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-240w.avif 240w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-360w.avif 360w
-                                            "
-                                            sizes="120px" />
-                                        <source
-                                            type="image/webp"
-                                            srcset="
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-120w.webp 120w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-180w.webp 180w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-240w.webp 240w,
-                                                https://misaliba.gambaaa.fun/assets/images/avatar-360w.webp 360w
-                                            "
-                                            sizes="120px" />
+                                    <picture>
+                                        <source type="image/avif" srcset="./assets/images/avatar-120w.avif 120w, ./assets/images/avatar-180w.avif 180w, ./assets/images/avatar-240w.avif 240w, ./assets/images/avatar-360w.avif 360w" sizes="120px">
+                                        <source type="image/webp" srcset="./assets/images/avatar-120w.webp 120w, ./assets/images/avatar-180w.webp 180w, ./assets/images/avatar-240w.webp 240w, ./assets/images/avatar-360w.webp 360w" sizes="120px">
                                         <img
-                                            src="https://misaliba.gambaaa.fun/assets/images/avatar-360w.webp"
+                                            src="./assets/images/avatar-360w.jpeg"
                                             alt="misaliba's profile picture"
                                             class="avatar"
                                             loading="lazy"
                                             decoding="async"
                                             width="886"
-                                            height="886"
-                                    /></picture>
+                                            height="886">
+                                    </picture>
                                 </figure>
-                                <section class="bio" aria-labelledby="user-card-username">
-                                    <h2 class="username" id="user-card-username" data-text="qt misaliba">qt misaliba</h2>
+                                <div class="bio">
+                                    <p class="username" id="profile-heading" data-text="qt misaliba">qt misaliba</p>
                                     <p class="name">misaliba · he/him</p>
                                     <p class="yap">Hi there, I’m Misaliba, an 18-year-old developer from Czechia currently attending pslib.cz high school.</p>
                                     <p class="yap">I have a passion for working on low-level projects, including my own operating system.</p>
@@ -159,201 +156,164 @@
                                         Currently, I’m primarily creating projects to gain a deeper understanding of how things work under the hood and how
                                         different components interact before embarking on more significant and serious projects.
                                     </p>
-                                </section>
-                            </header>
-                        </aside>
-                        <article class="second">
-                            <div class="hero" aria-labelledby="intro-heading">
-                                <p class="meta"><span class="meta-bar" aria-hidden="true"></span>DEVELOPER · HE/HIM · CZECHIA</p>
-                                <h1 class="intro" id="intro-heading">hi, i’m <strong>misaliba.</strong></h1>
-                                <p class="lead">
-                                    I’m currently pursuing a degree in <strong>Web Apps &amp; Multimedia</strong> at <a href="https://pslib.cz">pslib.cz</a> and
-                                    am working on developing an Arsenus Discord bot. My primary programming languages include Go and TypeScript, along with
-                                    other technologies such as React, PostgreSQL, Redis, and Docker. In my free time, I enjoy watching anime, listening to
-                                    music, and spending time with my family and friends.
-                                </p>
-                                <div class="skillcards">
-                                    <div class="skillcard">
-                                        <strong>8+</strong>
-                                        <p>years coding</p>
-                                    </div>
-                                    <div class="skillcard">
-                                        <strong>Go</strong>
-                                        <p>favorite language</p>
-                                    </div>
-                                    <div class="skillcard">
-                                        <strong>React</strong>
-                                        <p>favorite framework</p>
-                                    </div>
-                                    <div class="skillcard">
-                                        <strong>24/7</strong>
-                                        <p>listening to music</p>
-                                    </div>
-                                </div>
-                                <div class="experiencecard">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                    <div class="content">
-                                        <p class="name">High School</p>
-                                        <strong> Web Applications &amp; Multimedia - <a href="https://pslib.cz/">pslib.cz</a> </strong>
-                                        <p class="time">2024 - ongoing</p>
-                                    </div>
                                 </div>
                             </div>
                         </article>
-                    </div>
-                </section>
-                <section class="techstack" id="techstack">
-                    <div class="container">
-                        <article>
-                            <div class="hero" aria-labelledby="intro-heading">
-                                <p class="meta">02 — SKILLS</p>
-                                <h2 class="intro" id="intro-heading">Technologies i use</h2>
-                                <p class="lead">A concise overview of the technology stack employed in the development of my projects.</p>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-cuttlefish"></i>
-                                            <p class="skill-slider__name">C/C++</p>
-                                        </div>
-                                        <strong class="skill-slider__value">76%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 76%"></div>
-                                    </div>
+                        <div class="hero second">
+                            <p class="meta"><span class="meta-bar" aria-hidden="true"></span>DEVELOPER&nbsp;· HE/HIM&nbsp;· CZECHIA</p>
+                            <h1 class="intro" id="home-heading">hi, i’m <strong>misaliba.</strong></h1>
+                            <p class="lead">
+                                I’m currently pursuing a degree in <strong>Web Apps &amp; Multimedia</strong> at <a href="https://pslib.cz">pslib.cz</a> and am
+                                working on developing an Arsenus Discord bot. My primary programming languages include Go and TypeScript, along with other
+                                technologies such as React, PostgreSQL, Redis, and Docker. In my free time, I enjoy watching anime, listening to music, and
+                                spending time with my family and friends.
+                            </p>
+                            <ul class="skillcards">
+                                <li class="skillcard">
+                                    <strong>8+</strong>
+                                    <p>years coding</p>
+                                </li>
+                                <li class="skillcard">
+                                    <strong>Go</strong>
+                                    <p>favorite language</p>
+                                </li>
+                                <li class="skillcard">
+                                    <strong>React</strong>
+                                    <p>favorite framework</p>
+                                </li>
+                                <li class="skillcard">
+                                    <strong>24/7</strong>
+                                    <p>listening to music</p>
+                                </li>
+                            </ul>
+                            <div class="experiencecard">
+                                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                                <div class="content">
+                                    <p class="name">High School</p>
+                                    <strong> Web Applications &amp; Multimedia - <a href="https://pslib.cz/">pslib.cz</a> </strong>
+                                    <p class="time">2024 - ongoing</p>
                                 </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-react"></i>
-                                            <p class="skill-slider__name">React</p>
-                                        </div>
-                                        <strong class="skill-slider__value">55%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 55%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-linux"></i>
-                                            <p class="skill-slider__name">Linux</p>
-                                        </div>
-                                        <strong class="skill-slider__value">80%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 80%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-git"></i>
-                                            <p class="skill-slider__name">Git</p>
-                                        </div>
-                                        <strong class="skill-slider__value">30%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 30%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-apple"></i>
-                                            <p class="skill-slider__name">Apple</p>
-                                        </div>
-                                        <strong class="skill-slider__value">2%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 2%"></div>
-                                    </div>
-                                </div>
-                                <a class="button" href="">
-                                    <i class="fas fa-arrow-right"></i>
-                                    See what i work with
-                                </a>
                             </div>
-                        </article>
+                        </div>
                     </div>
                 </section>
-                <section class="projects" id="projects">
-                    <div class="container">
-                        <article>
-                            <div class="hero" aria-labelledby="intro-heading">
-                                <p class="meta">03 — PROJECTS</p>
-                                <h2 class="intro" id="intro-heading">Built by Me</h2>
+                <section class="techstack" id="techstack" aria-labelledby="tech-heading">
+                    <div class="container hero">
+                        <p class="meta">02 — SKILLS</p>
+                        <h2 class="intro" id="tech-heading">Technologies I use</h2>
+                        <p class="lead">A concise overview of the technology stack employed in the development of my projects.</p>
+                        <ul class="skills-list" aria-label="Technology skill levels">
+                            <li class="skill-slider">
+                                <div class="skill-slider__top">
+                                    <h3 class="skill-slider__title">
+                                        <i aria-hidden="true" class="skill-slider__icon fab fa-cuttlefish"></i>
+                                        <span class="skill-slider__name">C/C++</span>
+                                    </h3>
+                                    <strong class="skill-slider__value">76%</strong>
+                                </div>
+                                <meter class="skill-slider__bar" min="0" max="100" value="76">76%</meter>
+                            </li>
+                            <li class="skill-slider">
+                                <div class="skill-slider__top">
+                                    <h3 class="skill-slider__title">
+                                        <i aria-hidden="true" class="skill-slider__icon fab fa-react"></i>
+                                        <span class="skill-slider__name">React</span>
+                                    </h3>
+                                    <strong class="skill-slider__value">55%</strong>
+                                </div>
+                                <meter class="skill-slider__bar" min="0" max="100" value="55">55%</meter>
+                            </li>
+                            <li class="skill-slider">
+                                <div class="skill-slider__top">
+                                    <h3 class="skill-slider__title">
+                                        <i aria-hidden="true" class="skill-slider__icon fab fa-linux"></i>
+                                        <span class="skill-slider__name">Linux</span>
+                                    </h3>
+                                    <strong class="skill-slider__value">80%</strong>
+                                </div>
+                                <meter class="skill-slider__bar" min="0" max="100" value="80">80%</meter>
+                            </li>
+                            <li class="skill-slider">
+                                <div class="skill-slider__top">
+                                    <h3 class="skill-slider__title">
+                                        <i aria-hidden="true" class="skill-slider__icon fab fa-git"></i>
+                                        <span class="skill-slider__name">Git</span>
+                                    </h3>
+                                    <strong class="skill-slider__value">30%</strong>
+                                </div>
+                                <meter class="skill-slider__bar" min="0" max="100" value="30">30%</meter>
+                            </li>
+                            <li class="skill-slider">
+                                <div class="skill-slider__top">
+                                    <h3 class="skill-slider__title">
+                                        <i aria-hidden="true" class="skill-slider__icon fab fa-apple"></i>
+                                        <span class="skill-slider__name">Apple</span>
+                                    </h3>
+                                    <strong class="skill-slider__value">2%</strong>
+                                </div>
+                                <meter class="skill-slider__bar" min="0" max="100" value="2">2%</meter>
+                            </li>
+                        </ul>
+                        <a class="button" href="/skills">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            See what i work with
+                        </a>
+                    </div>
+                </section>
+                <section class="projects" id="projects" aria-labelledby="projects-heading">
+                    <div class="container hero">
+                        <p class="meta">03 — PROJECTS</p>
+                        <h2 class="intro" id="projects-heading">Built by Me</h2>
 
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-cuttlefish"></i>
-                                            <p class="skill-slider__name">C/C++</p>
-                                        </div>
-                                        <strong class="skill-slider__value">76%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 76%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-react"></i>
-                                            <p class="skill-slider__name">React</p>
-                                        </div>
-                                        <strong class="skill-slider__value">55%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 55%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-linux"></i>
-                                            <p class="skill-slider__name">Linux</p>
-                                        </div>
-                                        <strong class="skill-slider__value">80%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 80%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-git"></i>
-                                            <p class="skill-slider__name">Git</p>
-                                        </div>
-                                        <strong class="skill-slider__value">30%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 30%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-slider">
-                                    <div class="skill-slider__top">
-                                        <div class="skill-slider__title">
-                                            <i class="skill-slider__icon fab fa-apple"></i>
-                                            <p class="skill-slider__name">Apple</p>
-                                        </div>
-                                        <strong class="skill-slider__value">2%</strong>
-                                    </div>
-                                    <div class="skill-slider__bar">
-                                        <div class="skill-slider__fill" style="--percentage: 2%"></div>
-                                    </div>
-                                </div>
-                                <a class="button" href="">
-                                    <i class="fas fa-arrow-right"></i>
-                                    Explore a bit more
-                                </a>
-                            </div>
-                        </article>
+                        <ul>
+                            <li class="project-card inprogress">
+                                <div class="project-card__status-bar"></div>
+                                <p class="project-card__status">In Progress</p>
+                                <h3 class="project-card__title">Arsenus</h3>
+                                <p class="project-card__description">Discord bot focused on functionaliy over profitability.</p>
+                                <ul class="project-card__tags" tags-area-label="Technologies used for Arsenus">
+                                    <li class="role-card blue">Go Lang</li>
+                                    <li class="role-card yellow">React</li>
+                                    <li class="role-card purple">TypeScript</li>
+                                    <li class="role-card pink">Arsenus Script</li>
+                                    <li class="role-card purple">PostgreSQL</li>
+                                </ul>
+                            </li>
+                            <li class="project-card">
+                                <div class="project-card__status-bar"></div>
+                                <p class="project-card__status">Planned</p>
+                                <h3 class="project-card__title">michlip.eu</h3>
+                                <p class="project-card__description">Project that focuses on user privacy.</p>
+                                <ul class="project-card__tags" tags-area-label="Technologies used for michlip.eu">
+                                    <li class="role-card blue">Go Lang</li>
+                                    <li class="role-card yellow">React</li>
+                                    <li class="role-card purple">TypeScript</li>
+                                    <li class="role-card purple">PostgreSQL</li>
+                                </ul>
+                            </li>
+                            <li class="project-card live">
+                                <div class="project-card__status-bar"></div>
+                                <p class="project-card__status">Live</p>
+                                <h3 class="project-card__title">misaliba.eu</h3>
+                                <p class="project-card__description">My personal site where i present my self.</p>
+                                <ul class="project-card__tags" tags-area-label="Technologies used for my personal portfolio">
+                                    <li class="role-card blue">TypeScript</li>
+                                    <li class="role-card yellow">Javascript</li>
+                                    <li class="role-card orange">HTML</li>
+                                    <li class="role-card purple">CSS</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class="button" href="/projects">
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            Explore a bit more
+                        </a>
                     </div>
                 </section>
             </main>
-            <footer aria-hidden="true">@ misaliba 2026 — made with ❤️</footer>
+            <footer>
+                <p>© misaliba 2026 — made with ❤️</p>
+            </footer>
         </div>
     </body>
 </html>
