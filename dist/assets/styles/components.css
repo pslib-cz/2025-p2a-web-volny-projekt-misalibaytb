@@ -83,8 +83,8 @@
   .techstack .skill-slider,
   .projects .project-card {
     padding: 1rem;
-    border: 1px solid var(--card-stroke);
-    border-radius: 8px;
+    border: 0.0625rem solid var(--card-stroke);
+    border-radius: 0.5rem;
     background: color-mix(
       in srgb,
       var(--background) 62%,
@@ -647,7 +647,7 @@
   }
 
   .button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-0.125rem);
     box-shadow: 0 0 2rem rgb(255 255 255 / 0.12);
   }
 
@@ -672,9 +672,8 @@
 
   .skill-slider-group-toggle {
     position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    margin: -1px;
+    height: 1px;
+    width: 1px;
     padding: 0;
     border: 0;
     opacity: 0;
@@ -815,8 +814,8 @@
   .skills-techstack .skill-slider-group {
     min-width: 0;
     padding: 1.125rem;
-    border: 1px solid var(--card-stroke);
-    border-radius: 8px;
+    border: 0.0625rem solid var(--card-stroke);
+    border-radius: 0.5rem;
     background: linear-gradient(
       180deg,
       color-mix(in srgb, var(--card-background) 92%, var(--blue)),
@@ -835,8 +834,9 @@
 
   .skills-techstack .skill-slider {
     padding: 0.8rem;
-    border: 1px solid color-mix(in srgb, var(--card-stroke) 70%, transparent);
-    border-radius: 8px;
+    border: 0.0625rem solid
+      color-mix(in srgb, var(--card-stroke) 70%, transparent);
+    border-radius: 0.5rem;
     background: color-mix(
       in srgb,
       var(--background) 62%,
@@ -857,7 +857,7 @@
     li:not(:first-child) {
     max-height: 12rem;
     padding-block: 0.8rem;
-    border-block-width: 1px;
+    border-block-width: 0.0625rem;
   }
 
   .skills-techstack .skill-slider__top {
