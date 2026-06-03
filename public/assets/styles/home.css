@@ -14,7 +14,6 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-family: "DM Sans", sans-serif;
     color: var(--text-highlight);
     font-size: 1rem;
     letter-spacing: 0.08em;
@@ -29,7 +28,6 @@
     border-radius: 0.25rem;
   }
   .hero .intro {
-    font-family: sans-serif;
     font-size: 3rem;
     font-weight: 300;
     color: var(--text-heading);
@@ -38,7 +36,6 @@
   }
   .hero .lead {
     color: var(--text);
-    font-family: "DM Sans", sans-serif;
     font-size: 1rem;
     margin: 0;
     opacity: 0.95;
@@ -69,6 +66,32 @@
     margin: 2rem 0;
   }
 
+  .techstack,
+  .projects {
+    min-height: 100vh;
+    padding-block: 2rem 3rem;
+  }
+
+  .techstack .skills-list,
+  .projects .project-list {
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0;
+    list-style: none;
+  }
+
+  .techstack .skill-slider,
+  .projects .project-card {
+    padding: 1rem;
+    border: 1px solid var(--card-stroke);
+    border-radius: 8px;
+    background: color-mix(
+      in srgb,
+      var(--background) 62%,
+      var(--card-background)
+    );
+  }
+
   @media screen and (min-width: 768px) {
     .home .container {
       flex-direction: row;
@@ -89,6 +112,87 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }
+
+  @media screen and (min-width: 900px) {
+    .techstack,
+    .projects {
+      padding-block: 4rem 5rem;
+    }
+
+    .techstack .hero,
+    .projects .hero {
+      display: grid;
+      grid-template-columns: minmax(20rem, 0.8fr) minmax(0, 1.2fr);
+      column-gap: clamp(2rem, 5vw, 4.5rem);
+      row-gap: 1.25rem;
+      align-items: start;
+      max-width: 1320px;
+      padding-block: 4rem;
+    }
+
+    .techstack .meta,
+    .techstack .intro,
+    .techstack .lead,
+    .techstack misaliba-button,
+    .techstack .button,
+    .projects .meta,
+    .projects .intro,
+    .projects .lead,
+    .projects misaliba-button,
+    .projects .button {
+      grid-column: 1;
+    }
+
+    .techstack .intro,
+    .projects .intro {
+      max-width: 9ch;
+      font-size: clamp(3rem, 4.2vw, 4.5rem);
+      line-height: 1;
+      overflow-wrap: normal;
+    }
+
+    .techstack .lead,
+    .projects .lead {
+      max-width: 24rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .techstack .button,
+    .projects .button {
+      justify-self: start;
+      margin-inline: 0;
+    }
+
+    .techstack .skills-list,
+    .projects .project-list {
+      display: grid;
+      grid-column: 2;
+      grid-row: 1 / span 5;
+      align-items: start;
+      gap: 1rem;
+      margin: 0;
+    }
+    .techstack .skills-list li {
+      margin: 0;
+    }
+
+    .techstack .skills-list {
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    }
+
+    .projects .project-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1180px) {
+    .techstack .hero,
+    .projects .hero {
+      grid-template-columns: minmax(24rem, 0.78fr) minmax(0, 1.22fr);
+    }
+  }
+
   @media print {
     .hero .meta-bar {
       display: none;

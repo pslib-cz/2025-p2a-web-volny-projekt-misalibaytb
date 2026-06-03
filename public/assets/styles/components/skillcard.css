@@ -15,7 +15,6 @@
 
   .skillcard strong {
     color: var(--text-highlight);
-    font-family: "DM Sans", sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
     line-height: 0.9;
@@ -24,7 +23,6 @@
 
   .skillcard p {
     color: var(--text);
-    font-family: "DM Sans", sans-serif;
     font-size: 0.75rem;
     font-weight: 300;
     margin: 0;

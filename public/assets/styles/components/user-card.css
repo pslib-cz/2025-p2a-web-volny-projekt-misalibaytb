@@ -2,7 +2,6 @@
   .user-card {
     display: flex;
     max-width: 380px;
-    width: 100%;
     flex-direction: column;
     border-radius: 0.5rem;
     background: var(--user-card-card);
@@ -21,14 +20,14 @@
   .user-card .banner {
     background-color: var(--user-card-primary);
     width: 100%;
-    height: 80px;
+    height: 5rem;
   }
   .user-card .avatar-frame {
     position: absolute;
-    top: 20px;
-    left: 16px;
-    width: 120px;
-    height: 120px;
+    top: 1.25rem;
+    left: 1rem;
+    width: 7.5rem;
+    height: 7.5rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     padding: 0.25rem;
@@ -48,7 +47,7 @@
     width: 100%;
     background: var(--user-card-inner-card);
     padding: 1rem;
-    padding-top: 4.875rem; /* 60px so ve get far away form picture and 18px is padding */
+    padding-top: 4.875rem;
     margin-top: 0;
   }
   .user-card .bio .username {
@@ -72,7 +71,6 @@
   }
 
   .user-card .bio .name {
-    font-family: "DM Sans", sans-serif;
     font-size: 0.875rem;
     font-weight: 300;
     color: var(--white);
@@ -84,7 +82,6 @@
   .user-card .bio .yap {
     margin-top: 0;
     color: var(--white);
-    font-family: "DM Sans", sans-serif;
     font-size: 0.875rem;
   }
   @media print {

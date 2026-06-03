@@ -1,10 +1,10 @@
-[component:project-card;*type,name,description,&tags,*tags-area-label]
+[component:project-card;*type,name,description,&tags,*aria-label]
 <li class="project-card">
     <div class="project-card__status-bar"></div>
     <p class="project-card__status">Planned</p>
     <h3 class="project-card__title">{name}</h3>
     <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [tags-area-label]>
+    <ul class="project-card__tags" [aria-label]>
         {tags}
     </ul>
 </li>
@@ -14,7 +14,7 @@
     <p class="project-card__status">Live</p>
     <h3 class="project-card__title">{name}</h3>
     <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [tags-area-label]>
+    <ul class="project-card__tags" [aria-label]>
         {tags}
     </ul>
 </li>
@@ -24,7 +24,7 @@
     <p class="project-card__status">In Progress</p>
     <h3 class="project-card__title">{name}</h3>
     <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [tags-area-label]>
+    <ul class="project-card__tags" [aria-label]>
         {tags}
     </ul>
 </li>

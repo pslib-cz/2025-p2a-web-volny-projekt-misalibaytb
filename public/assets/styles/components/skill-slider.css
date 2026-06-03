@@ -28,7 +28,6 @@
   .skill-slider__name {
     margin: 0;
     color: var(--white);
-    font-family: "DM Sans", sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
   }
@@ -36,7 +35,6 @@
   .skill-slider__value {
     color: var(--white);
     white-space: nowrap;
-    font-family: "DM Sans", sans-serif;
     font-size: 1rem;
   }
 

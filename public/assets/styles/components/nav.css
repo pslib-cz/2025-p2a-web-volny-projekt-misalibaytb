@@ -1,6 +1,5 @@
-@layer component {
+@layer layout {
   nav {
-    width: 100%;
     font-size: 2rem;
   }
   nav .container {
@@ -13,7 +12,7 @@
   }
   nav a {
     font-family: "Pixelify Sans", sans-serif;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1;
     text-decoration: none;
   }
@@ -21,12 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
   }
   nav .head a {
     color: var(--text-highlight);
   }
-  nav menu.links > li,
   nav ul.links > li {
     display: block;
     margin: 0;
@@ -34,7 +31,7 @@
     list-style: none;
     list-style-type: none;
   }
-  nav menu.links > li::marker,
+
   nav ul.links > li::marker {
     content: "";
   }
@@ -68,7 +65,7 @@
     gap: 0.75rem;
     text-wrap: nowrap;
     width: 100%;
-    min-height: 44px;
+    min-height: 2.75rem;
     color: var(--white);
   }
   nav .links i {
@@ -83,14 +80,14 @@
     white-space: nowrap;
   }
   .hamburger-toggle:focus-visible + .hamburger {
-    outline: 2px solid var(--text-hyperlink);
-    outline-offset: 4px;
+    outline: 0.125rem solid var(--text-hyperlink);
+    outline-offset: 0.25rem;
   }
   .hamburger {
     display: block;
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     padding: 0;
     margin: 0;
     cursor: pointer;
@@ -103,9 +100,9 @@
     transform: translate(-50%, -50%);
     display: block;
     width: 80%;
-    height: 4px;
+    height: 0.25rem;
     background: var(--white);
-    border-radius: 16px;
+    border-radius: 1rem;
     transition:
       top 0.25s ease-in-out 0.25s,
       opacity 0s linear 0.25s,

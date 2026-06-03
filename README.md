@@ -59,4 +59,19 @@ To inspect how image sizes are generated, add the `--debug-images` flag:
 
 Images are mainly generated as AVIF, with WebP used as a fallback. The script determines the maximum image size and generates variants for different DPI settings.
 
+## Credits
+
+This project uses:
+
+- [Font Awesome Free](https://fontawesome.com/) icons by Fonticons, Inc.
+- [Google Fonts](https://fonts.google.com/) for typography
+
+Font Awesome Free is licensed under CC BY 4.0, SIL OFL 1.1, and MIT depending on the used files.  
+Google Fonts are open-source fonts licensed per font family, commonly under the SIL Open Font License.
+
+License links:
+
+- https://fontawesome.com/license/free
+- https://developers.google.com/fonts/faq
+
 ## Feedback
