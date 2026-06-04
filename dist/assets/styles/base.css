@@ -146,7 +146,7 @@
     color: var(--text-highlight);
   }
   .container {
-    max-width: 1200px;
+    max-width: 75rem;
     width: 100%;
     margin: auto;
     padding: 1rem 1rem;

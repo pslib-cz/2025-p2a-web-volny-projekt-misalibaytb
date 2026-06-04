@@ -3,7 +3,7 @@
     padding-bottom: 3.5rem;
     color: var(--text);
     width: 100%;
-    max-width: 620px;
+    max-width: 38.75rem;
     margin: auto;
   }
   .home {
@@ -100,16 +100,16 @@
       flex-wrap: wrap;
     }
     .home .skillcards {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
     }
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1024px) {
     .home .container {
       flex-wrap: nowrap;
     }
     .home .skillcards {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     }
   }
 
@@ -126,7 +126,6 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
-      max-width: 1320px;
       padding-block: 4rem;
     }
 

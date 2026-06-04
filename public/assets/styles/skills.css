@@ -5,7 +5,7 @@
   }
 
   .skills-techstack .hero {
-    max-width: 620px;
+    max-width: 38.75rem;
   }
 
   .skills-techstack .techstack-skills-list {
@@ -13,7 +13,7 @@
     gap: 1rem;
     width: 100%;
     padding: 0;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
     list-style: none;
   }
 
@@ -112,7 +112,6 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
-      max-width: 1320px;
       padding-block: 4rem;
     }
 
@@ -158,9 +157,15 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 0fr);
       column-gap: 0;
+      row-gap: 0.75rem;
       transition:
         grid-template-columns 0.35s ease,
         column-gap 0.35s ease;
+    }
+
+    .skills-techstack .skill-slider-group:first-child .skill-slider {
+      --this-margin: 0;
+      margin-block: 0;
     }
 
     .skills-techstack

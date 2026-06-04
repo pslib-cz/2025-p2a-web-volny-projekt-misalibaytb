@@ -3,7 +3,7 @@
     padding-bottom: 3.5rem;
     color: var(--text);
     width: 100%;
-    max-width: 620px;
+    max-width: 38.75rem;
     margin: auto;
   }
   .home {
@@ -100,16 +100,16 @@
       flex-wrap: wrap;
     }
     .home .skillcards {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
     }
   }
 
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1024px) {
     .home .container {
       flex-wrap: nowrap;
     }
     .home .skillcards {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     }
   }
 
@@ -126,7 +126,6 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
-      max-width: 1320px;
       padding-block: 4rem;
     }
 
@@ -353,6 +352,93 @@
 
   .skill-slider {
     width: 100%;
+    margin: 1rem 0;
+  }
+
+  .skill-slider__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .skill-slider__title {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+  }
+
+  .skill-slider__icon {
+    color: var(--white);
+    font-size: 1.05rem;
+  }
+
+  .skill-slider__name {
+    margin: 0;
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .skill-slider__value {
+    color: var(--white);
+    white-space: nowrap;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+  }
+
+  .skill-slider__bar {
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--blue);
+    box-shadow: 0 0 0.5rem rgb(209 184 255 / 0.35);
+    overflow: hidden;
+    appearance: none;
+  }
+  .skill-slider__bar::-webkit-meter-bar {
+    height: 0.7rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--separator);
+  }
+
+  .skill-slider__bar::-webkit-meter-optimum-value {
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), #d1b8ff);
+  }
+
+  .skill-slider__bar::-webkit-meter-suboptimum-value {
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), #d1b8ff);
+  }
+
+  .skill-slider__bar::-webkit-meter-even-less-good-value {
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), #d1b8ff);
+  }
+  @media print {
+    .skill-slider__icon,
+    .skill-slider__name,
+    .skill-slider__value {
+      color: #000000;
+    }
+    .skill-slider__bar {
+      background: #000 !important;
+      box-shadow: none !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+
+  .skill-slider {
+    width: 100%;
     --this-margin: 1rem;
     margin: var(--this-margin) 0;
   }
@@ -484,14 +570,14 @@
 
   .user-card {
     display: flex;
-    max-width: 380px;
+    max-width: 23.75rem;
     flex-direction: column;
     border-radius: 0.5rem;
     background: var(--user-card-card);
     position: relative;
     overflow: hidden;
     padding: 0.25rem;
-    flex: 0 0 min(100%, 380px);
+    flex: 0 0 min(100%, 23.75rem);
   }
 
   .user-card__wrapper {
@@ -799,7 +885,7 @@
   }
 
   .skills-techstack .hero {
-    max-width: 620px;
+    max-width: 38.75rem;
   }
 
   .skills-techstack .techstack-skills-list {
@@ -807,7 +893,7 @@
     gap: 1rem;
     width: 100%;
     padding: 0;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
     list-style: none;
   }
 
@@ -906,7 +992,6 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
-      max-width: 1320px;
       padding-block: 4rem;
     }
 
@@ -952,9 +1037,15 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 0fr);
       column-gap: 0;
+      row-gap: 0.75rem;
       transition:
         grid-template-columns 0.35s ease,
         column-gap 0.35s ease;
+    }
+
+    .skills-techstack .skill-slider-group:first-child .skill-slider {
+      --this-margin: 0;
+      margin-block: 0;
     }
 
     .skills-techstack
