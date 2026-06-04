@@ -126,6 +126,7 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
+      max-width: 1320px;
       padding-block: 4rem;
     }
 
@@ -885,7 +886,7 @@
   }
 
   .skills-techstack .hero {
-    max-width: 38.75rem;
+    max-width: 620px;
   }
 
   .skills-techstack .techstack-skills-list {
@@ -992,6 +993,7 @@
       column-gap: clamp(2rem, 5vw, 4.5rem);
       row-gap: 1.25rem;
       align-items: start;
+      max-width: 1320px;
       padding-block: 4rem;
     }
 
