@@ -1,6 +1,7 @@
 @layer components {
   .hero .meta {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.75rem;
     margin: 0 0 1.5rem;
@@ -8,7 +9,6 @@
 
   .hero .meta-bar {
     display: block;
-    flex: 0 0 2.75rem;
     width: 2.75rem;
     height: 0.25rem;
     border-radius: 0.25rem;
@@ -36,7 +36,8 @@
   }
 
   .contact-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
     min-height: 6rem;
@@ -67,7 +68,6 @@
   .contact-card i {
     position: relative;
     display: block;
-    flex: 0 0 2.75rem;
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 0.5rem;
@@ -142,7 +142,11 @@
     user-select: none;
   }
 
-  .projects-page__stats article,
+  .projects-page .button {
+    margin-block-start: 1.5rem;
+    margin-inline: 0;
+  }
+
   .project-process article {
     border: 0.0625rem solid var(--card-stroke);
     border-radius: 0.5rem;
@@ -153,22 +157,8 @@
     );
   }
 
-  .projects-page__stats article,
   .project-process article {
     padding: 1rem;
-  }
-
-  .projects-page__stats article {
-    min-width: 0;
-  }
-
-  .projects-page__stats strong,
-  .projects-page__stats span {
-    display: block;
-  }
-
-  .projects-page__stats span {
-    margin-top: 0.45rem;
   }
 
   .projects-page .project-card {
@@ -267,8 +257,11 @@
     margin: 0.5rem 0;
   }
   .project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 4rem), max-content)
+    );
     gap: 0.5rem;
     padding: 0;
     margin: 0.5rem 0 0 0;
@@ -292,12 +285,11 @@
     border-radius: 1rem;
     border: 0.125rem solid var(--purple-card-stroke);
     padding: 1rem;
-    display: inline-flex;
-    flex-direction: row;
+    display: inline-grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     width: 100%;
-    flex: 0 0 auto;
-    align-self: flex-start;
+    align-self: start;
     gap: 0.625rem;
   }
 
@@ -328,15 +320,16 @@
   }
 
   .skill-slider__top {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
   }
 
   .skill-slider__title {
     all: unset;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.75rem;
     min-width: 0;
@@ -424,6 +417,15 @@
     align-self: start;
   }
 
+  .skillcard.white {
+    color: var(--white);
+  }
+
+  .skillcard.white strong,
+  .skillcard.white p {
+    color: inherit;
+  }
+
   nav ul.links > li::marker {
     content: "";
   }
@@ -504,15 +506,13 @@
   }
 
   .user-card {
-    display: flex;
+    display: grid;
     max-width: 23.75rem;
-    flex-direction: column;
     border-radius: 0.5rem;
     background: var(--user-card-card);
     position: relative;
     overflow: hidden;
     padding: 0.25rem;
-    flex: 0 0 min(100%, 23.75rem);
   }
 
   .user-card__wrapper {
@@ -684,7 +684,8 @@
   }
 
   .skill-slider-group-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     gap: 0.5rem;
     inline-size: 100%;
@@ -697,7 +698,6 @@
   }
 
   .skill-slider-group-header span:not(.sr-only, .more) {
-    margin-inline-end: auto;
     color: var(--white);
     font-size: 1rem;
     font-weight: 500;
@@ -779,6 +779,10 @@
     transform: rotate(0deg);
   }
 
+  .skills-techstack__intro .button {
+    margin-block-start: 1rem;
+  }
+
   .skills-techstack .skill-slider-group {
     min-width: 0;
     padding: 1.125rem;
@@ -837,7 +841,6 @@
   }
 
   .skills-techstack .skill-slider__icon {
-    flex: 0 0 auto;
     width: 1.15rem;
     color: color-mix(in srgb, var(--white) 82%, var(--blue));
     text-align: center;
@@ -866,6 +869,10 @@
   @media screen and (min-width: 900px) {
     .skills-techstack__intro .meta {
       margin-bottom: 0.25rem;
+    }
+
+    .skills-techstack__intro .button {
+      margin-block-start: 0;
     }
 
     .skills-techstack__intro .intro,

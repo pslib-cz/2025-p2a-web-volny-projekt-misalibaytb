@@ -7,15 +7,17 @@
   }
 
   .home {
-    min-height: 100vh;
     align-content: center;
   }
 
   .home .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     gap: 3rem;
+  }
+
+  .home .hero {
+    min-height: 100vh;
   }
 
   .home .skillcards {
@@ -41,15 +43,14 @@
   .techstack,
   .projects,
   .contact {
-    min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
   .techstack .hero,
   .projects .hero,
   .contact .hero {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    min-height: 100vh;
   }
 
   .techstack .section-copy,
@@ -80,6 +81,11 @@
     list-style: none;
   }
 
+  .contact .contact-list {
+    display: grid;
+    gap: 1rem;
+  }
+
   .techstack .section-copy misaliba-button,
   .techstack .section-copy .button,
   .projects .section-copy misaliba-button,
@@ -91,10 +97,9 @@
 
   @media screen and (min-width: 768px) {
     .home .container {
-      flex-direction: row;
-      align-items: flex-start;
+      align-items: start;
+      grid-template-columns: minmax(0, 23.75rem) minmax(0, 38.75rem);
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .home .skillcards {
@@ -103,10 +108,6 @@
   }
 
   @media screen and (min-width: 1024px) {
-    .home .container {
-      flex-wrap: nowrap;
-    }
-
     .home .user-card {
       position: sticky;
       top: 2rem;
@@ -180,7 +181,6 @@
       grid-column: 2;
       grid-row: 1 / span 5;
       align-items: start;
-      gap: 1rem;
       margin: 0;
     }
 
@@ -196,6 +196,10 @@
       grid-template-columns: minmax(0, 1fr);
     }
 
+    .projects .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+
     .contact .contact-list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -203,7 +207,6 @@
 
   @media screen and (min-width: 1180px) {
     .techstack .hero,
-    .projects .hero,
     .contact .hero {
       grid-template-columns: minmax(24rem, 0.78fr) minmax(0, 1.22fr);
     }
@@ -256,7 +259,8 @@
 
 @layer components {
   .hero .meta {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.75rem;
     margin: 0 0 1.5rem;
@@ -264,7 +268,6 @@
 
   .hero .meta-bar {
     display: block;
-    flex: 0 0 2.75rem;
     width: 2.75rem;
     height: 0.25rem;
     border-radius: 0.25rem;
@@ -292,7 +295,8 @@
   }
 
   .contact-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 1rem;
     min-height: 6rem;
@@ -323,7 +327,6 @@
   .contact-card i {
     position: relative;
     display: block;
-    flex: 0 0 2.75rem;
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 0.5rem;

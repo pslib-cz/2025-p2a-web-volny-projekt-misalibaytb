@@ -17,7 +17,8 @@
   }
 
   .skill-slider-group-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     gap: 0.5rem;
     inline-size: 100%;
@@ -30,7 +31,6 @@
   }
 
   .skill-slider-group-header span:not(.sr-only, .more) {
-    margin-inline-end: auto;
     color: var(--white);
     font-size: 1rem;
     font-weight: 500;

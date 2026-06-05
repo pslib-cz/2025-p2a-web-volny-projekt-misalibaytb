@@ -4,12 +4,11 @@
     border-radius: 1rem;
     border: 0.125rem solid var(--purple-card-stroke);
     padding: 1rem;
-    display: inline-flex;
-    flex-direction: row;
+    display: inline-grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     width: 100%;
-    flex: 0 0 auto;
-    align-self: flex-start;
+    align-self: start;
     gap: 0.625rem;
   }
 

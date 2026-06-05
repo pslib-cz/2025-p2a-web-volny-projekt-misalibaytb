@@ -1,10 +1,10 @@
 @layer layout {
   .skills-techstack {
-    min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
   .skills-techstack .hero {
+    min-height: 100vh;
     max-width: 620px;
   }
 
@@ -115,6 +115,10 @@
 }
 
 @layer components {
+  .skills-techstack__intro .button {
+    margin-block-start: 1rem;
+  }
+
   .skills-techstack .skill-slider-group {
     min-width: 0;
     padding: 1.125rem;
@@ -173,7 +177,6 @@
   }
 
   .skills-techstack .skill-slider__icon {
-    flex: 0 0 auto;
     width: 1.15rem;
     color: color-mix(in srgb, var(--white) 82%, var(--blue));
     text-align: center;
@@ -202,6 +205,10 @@
   @media screen and (min-width: 900px) {
     .skills-techstack__intro .meta {
       margin-bottom: 0.25rem;
+    }
+
+    .skills-techstack__intro .button {
+      margin-block-start: 0;
     }
 
     .skills-techstack__intro .intro,

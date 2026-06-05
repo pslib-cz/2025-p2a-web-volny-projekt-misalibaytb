@@ -1,4 +1,4 @@
-[component:project-card;*type,name,description,&content,*aria-label,*number,*href,*link-text,*link-label]
+[component:project-card;*type,name,description,&content,*aria-label,*number]
 <li class="project-card">
   <div class="project-card__status-bar"></div>
   <p class="project-card__status">Planned</p>
@@ -53,12 +53,6 @@
   <ul class="project-card__tags" [aria-label]>
     {content}
   </ul>
-  <div class="project-card__actions">
-    <a href="{href}" aria-label="{link-label}">
-      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-      {link-text}
-    </a>
-  </div>
 </li>
 (type=page-inprogress)
 <li class="project-card project-card--featured inprogress">

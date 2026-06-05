@@ -1,8 +1,6 @@
 @layer layout {
   nav .container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
     justify-content: center;
     gap: 0;
     padding: 1rem;
@@ -10,20 +8,17 @@
 
   nav .head,
   nav .links a {
-    display: flex;
+    display: grid;
     align-items: center;
   }
 
   nav .head {
-    justify-content: space-between;
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   nav .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
     justify-content: center;
-    flex-wrap: nowrap;
     gap: 0.75rem;
     width: 100%;
     max-height: 0;
@@ -40,7 +35,8 @@
   }
 
   nav .links a {
-    justify-content: flex-start;
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-content: start;
     gap: 0.75rem;
     width: 100%;
     min-height: 2.75rem;
@@ -118,13 +114,14 @@
 
     nav .head {
       justify-content: center;
+      grid-template-columns: auto;
     }
 
     nav .links {
-      flex-direction: row;
       align-items: center;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 1.25rem;
       max-height: none;
       overflow: visible;
@@ -143,8 +140,8 @@
 
   @media screen and (min-width: 1024px) {
     nav .container {
-      flex-direction: row;
       align-items: center;
+      grid-template-columns: auto minmax(0, 1fr);
       justify-content: space-between;
     }
 

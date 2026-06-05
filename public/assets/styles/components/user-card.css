@@ -1,14 +1,12 @@
 @layer components {
   .user-card {
-    display: flex;
+    display: grid;
     max-width: 23.75rem;
-    flex-direction: column;
     border-radius: 0.5rem;
     background: var(--user-card-card);
     position: relative;
     overflow: hidden;
     padding: 0.25rem;
-    flex: 0 0 min(100%, 23.75rem);
   }
 
   .user-card__wrapper {

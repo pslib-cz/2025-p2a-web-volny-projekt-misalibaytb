@@ -7,15 +7,17 @@
   }
 
   .home {
-    min-height: 100vh;
     align-content: center;
   }
 
   .home .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     gap: 3rem;
+  }
+
+  .home .hero {
+    min-height: 100vh;
   }
 
   .home .skillcards {
@@ -41,15 +43,14 @@
   .techstack,
   .projects,
   .contact {
-    min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
   .techstack .hero,
   .projects .hero,
   .contact .hero {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    min-height: 100vh;
   }
 
   .techstack .section-copy,
@@ -80,6 +81,11 @@
     list-style: none;
   }
 
+  .contact .contact-list {
+    display: grid;
+    gap: 1rem;
+  }
+
   .techstack .section-copy misaliba-button,
   .techstack .section-copy .button,
   .projects .section-copy misaliba-button,
@@ -91,10 +97,9 @@
 
   @media screen and (min-width: 768px) {
     .home .container {
-      flex-direction: row;
-      align-items: flex-start;
+      align-items: start;
+      grid-template-columns: minmax(0, 23.75rem) minmax(0, 38.75rem);
       justify-content: center;
-      flex-wrap: wrap;
     }
 
     .home .skillcards {
@@ -103,10 +108,6 @@
   }
 
   @media screen and (min-width: 1024px) {
-    .home .container {
-      flex-wrap: nowrap;
-    }
-
     .home .user-card {
       position: sticky;
       top: 2rem;
@@ -180,7 +181,6 @@
       grid-column: 2;
       grid-row: 1 / span 5;
       align-items: start;
-      gap: 1rem;
       margin: 0;
     }
 
@@ -196,6 +196,10 @@
       grid-template-columns: minmax(0, 1fr);
     }
 
+    .projects .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+
     .contact .contact-list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -203,7 +207,6 @@
 
   @media screen and (min-width: 1180px) {
     .techstack .hero,
-    .projects .hero,
     .contact .hero {
       grid-template-columns: minmax(24rem, 0.78fr) minmax(0, 1.22fr);
     }
@@ -223,7 +226,6 @@
   }
 
   .projects-page {
-    min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
@@ -234,6 +236,19 @@
 
   .projects-page__intro {
     width: 100%;
+    display: contents;
+  }
+
+  .projects-page .hero {
+    display: grid;
+    min-height: 100vh;
+  }
+
+  .projects-page__intro .meta,
+  .projects-page__intro .intro,
+  .projects-page__intro .lead,
+  .projects-page__intro .projects-page__stats {
+    order: 1;
   }
 
   .projects-page__stats,
@@ -255,26 +270,46 @@
   }
 
   .projects-page__list {
+    order: 2;
     width: 100%;
     margin-top: 2rem;
+    grid-auto-rows: auto auto auto auto auto;
+  }
+
+  .projects-page .button {
+    order: 3;
+    width: fit-content;
   }
 
   .projects-page .project-card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-row: span 5;
+    grid-template-rows: subgrid;
     min-height: 100%;
     margin: 0;
   }
 
-  .project-card__header,
-  .project-card__actions {
-    display: flex;
+  .project-card__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
   }
 
+  .projects-page .project-card__header {
+    grid-row: 1;
+  }
+
+  .projects-page .project-card__title {
+    grid-row: 2;
+  }
+
+  .projects-page .project-card__description {
+    grid-row: 3;
+  }
+
   .project-card__highlights {
+    grid-row: 4;
     gap: 0.6rem;
     margin: 1rem 0;
   }
@@ -285,18 +320,10 @@
   }
 
   .projects-page .project-card__tags {
+    grid-row: 5;
+    align-self: end;
     margin-top: auto;
     padding-top: 1rem;
-  }
-
-  .project-card__actions {
-    margin-top: 1rem;
-  }
-
-  .project-card__actions a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 
   .project-process {
@@ -328,7 +355,7 @@
 
     .projects-page .hero {
       display: grid;
-      grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1.28fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
       column-gap: clamp(2rem, 5vw, 5rem);
       align-items: start;
       padding-block: 4rem;
@@ -337,11 +364,20 @@
     .projects-page__intro {
       position: sticky;
       top: 2rem;
+      display: block;
+      grid-column: 1;
+      grid-row: 1;
     }
 
     .projects-page__list {
+      grid-column: 2;
+      grid-row: 1;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       margin-top: 0;
+    }
+
+    .projects-page .button {
+      justify-self: start;
     }
 
     .project-process .container {
@@ -378,9 +414,7 @@
   }
 
   nav .container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
     justify-content: center;
     gap: 0;
     padding: 1rem;
@@ -388,20 +422,17 @@
 
   nav .head,
   nav .links a {
-    display: flex;
+    display: grid;
     align-items: center;
   }
 
   nav .head {
-    justify-content: space-between;
+    grid-template-columns: minmax(0, 1fr) auto;
   }
 
   nav .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
     justify-content: center;
-    flex-wrap: nowrap;
     gap: 0.75rem;
     width: 100%;
     max-height: 0;
@@ -418,7 +449,8 @@
   }
 
   nav .links a {
-    justify-content: flex-start;
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-content: start;
     gap: 0.75rem;
     width: 100%;
     min-height: 2.75rem;
@@ -496,13 +528,14 @@
 
     nav .head {
       justify-content: center;
+      grid-template-columns: auto;
     }
 
     nav .links {
-      flex-direction: row;
       align-items: center;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 1.25rem;
       max-height: none;
       overflow: visible;
@@ -521,8 +554,8 @@
 
   @media screen and (min-width: 1024px) {
     nav .container {
-      flex-direction: row;
       align-items: center;
+      grid-template-columns: auto minmax(0, 1fr);
       justify-content: space-between;
     }
 
@@ -538,11 +571,11 @@
   }
 
   .skills-techstack {
-    min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
   .skills-techstack .hero {
+    min-height: 100vh;
     max-width: 620px;
   }
 

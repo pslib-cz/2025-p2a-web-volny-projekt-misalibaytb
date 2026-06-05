@@ -34,6 +34,7 @@
       content="https://misaliba.gambaaa.fun/assets/images/avatar.jpeg"
     />
     <link rel="canonical" href="https://misaliba.gambaaa.fun/projects" />
+    <script src="/assets/scripts/scroll.js" defer></script>
   </head>
 
   <body>
@@ -56,16 +57,23 @@
                 A focused overview of active and shipped projects, from Discord
                 tooling to web apps and this portfolio.
               </p>
-              <div class="projects-page__stats" aria-label="Project overview">
-                <article>
-                  <strong>3</strong>
-                  <span>featured projects</span>
-                </article>
-                <article>
-                  <strong>8+</strong>
-                  <span>core technologies</span>
-                </article>
-              </div>
+              <ul class="projects-page__stats" aria-label="Project overview">
+                <misaliba-skill-card
+                  type="white"
+                  value="3"
+                  name="featured projects"
+                />
+                <misaliba-skill-card
+                  type="white"
+                  value="8+"
+                  name="used technologies"
+                />
+              </ul>
+              <misaliba-button
+                icon="fas fa-arrow-right"
+                text="Interested? Contact me!"
+                href="/#contact"
+              />
             </div>
 
             <ul class="projects-page__list" aria-label="Featured projects">
@@ -100,9 +108,6 @@
                 number="02"
                 name="misaliba.eu"
                 description="Personal portfolio built to present my profile, technology stack, and projects in a fast static website."
-                href="https://misaliba.eu/"
-                link-text="Visit"
-                link-label="Open misaliba.eu"
                 aria-label="Technologies used for misaliba.eu"
               >
                 <misaliba-role-card name="TypeScript" color="blue" />
