@@ -1,180 +1,119 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | misaliba</title>
 
-    <link rel="stylesheet" href="/assets/styles/main.css" />
-    <link rel="stylesheet" href="/assets/styles/home.css" />
-    <link rel="stylesheet" href="/assets/styles/projects.css" />
-    <misaliba-head />
-    <script src="/assets/scripts/grid.js" defer></script>
-    <meta
-      name="description"
-      content="Projects built by misaliba, including Discord bots, privacy-focused web tools, and the personal portfolio site."
-    />
-    <meta property="og:title" content="Projects | misaliba" />
-    <meta
-      property="og:description"
-      content="A closer look at the projects misaliba builds with Go, TypeScript, React, PostgreSQL, Redis, Docker, HTML, and CSS."
-    />
-    <meta property="og:url" content="https://misaliba.gambaaa.fun/projects" />
-    <meta
-      property="og:image"
-      content="https://misaliba.gambaaa.fun/assets/images/avatar.jpeg"
-    />
-    <meta name="twitter:title" content="Projects | misaliba" />
-    <meta
-      name="twitter:description"
-      content="A closer look at the projects misaliba builds with Go, TypeScript, React, PostgreSQL, Redis, Docker, HTML, and CSS."
-    />
-    <meta
-      name="twitter:image"
-      content="https://misaliba.gambaaa.fun/assets/images/avatar.jpeg"
-    />
-    <link rel="canonical" href="https://misaliba.gambaaa.fun/projects" />
-    <script src="/assets/scripts/scroll.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | misaliba</title>
 
-  <body>
-    <div id="root">
-      <header>
-        <misaliba-navbar />
-      </header>
+  <link rel="stylesheet" href="/assets/styles/main.css" />
+  <link rel="stylesheet" href="/assets/styles/home.css" />
+  <link rel="stylesheet" href="/assets/styles/projects.css" />
+  <misaliba-head />
+  <script src="/assets/scripts/grid.js" defer></script>
+  <meta name="description"
+    content="Projects built by misaliba, including Discord bots, privacy-focused web tools, and the personal portfolio site." />
+  <meta property="og:title" content="Projects | misaliba" />
+  <meta property="og:description"
+    content="A closer look at the projects misaliba builds with Go, TypeScript, React, PostgreSQL, Redis, Docker, HTML, and CSS." />
+  <meta property="og:url" content="https://misaliba.gambaaa.fun/projects" />
+  <meta property="og:image" content="https://misaliba.gambaaa.fun/assets/images/avatar.jpeg" />
+  <meta name="twitter:title" content="Projects | misaliba" />
+  <meta name="twitter:description"
+    content="A closer look at the projects misaliba builds with Go, TypeScript, React, PostgreSQL, Redis, Docker, HTML, and CSS." />
+  <meta name="twitter:image" content="https://misaliba.gambaaa.fun/assets/images/avatar.jpeg" />
+  <link rel="canonical" href="https://misaliba.gambaaa.fun/projects" />
+</head>
 
-      <main>
-        <section
-          class="projects-page"
-          id="projects"
-          aria-labelledby="projects-heading"
-        >
-          <div class="container hero">
-            <div class="projects-page__intro">
-              <p class="meta">03 — PROJECTS</p>
-              <h1 class="intro" id="projects-heading">Things I am building</h1>
-              <p class="lead">
-                A focused overview of active and shipped projects, from Discord
-                tooling to web apps and this portfolio.
-              </p>
-              <ul class="projects-page__stats" aria-label="Project overview">
-                <misaliba-skill-card
-                  type="white"
-                  value="3"
-                  name="featured projects"
-                />
-                <misaliba-skill-card
-                  type="white"
-                  value="8+"
-                  name="used technologies"
-                />
+<body>
+  <div id="root">
+    <header>
+      <misaliba-navbar />
+    </header>
+
+    <main>
+      <section class="projects-page" id="projects" aria-labelledby="projects-heading">
+        <div class="container hero">
+          <div class="projects-page__intro">
+            <p class="meta">03 — PROJECTS</p>
+            <h1 class="intro" id="projects-heading">Things I am building</h1>
+            <p class="lead">
+              A focused overview of active and shipped projects, from Discord
+              tooling to web apps and this portfolio.
+            </p>
+            <ul class="projects-page__stats" aria-label="Project overview">
+              <misaliba-skill-card type="white" value="3" name="featured projects" />
+              <misaliba-skill-card type="white" value="8+" name="used technologies" />
+            </ul>
+            <misaliba-button icon="fas fa-arrow-right" text="Interested? Contact me!" href="/#contact" />
+          </div>
+
+          <ul class="projects-page__list" aria-label="Featured projects">
+            <misaliba-project-card type="page-inprogress" number="01" name="Arsenus"
+              description="Discord bot focused on useful server features, automation, and a workflow that favors functionality over profitability.">
+              <ul class="project-card__highlights" aria-label="Arsenus highlights">
+                <li>Bot-first backend work in Go</li>
+                <li>Dashboard ideas with React and TypeScript</li>
+                <li>Persistent data with PostgreSQL</li>
               </ul>
-              <misaliba-button
-                icon="fas fa-arrow-right"
-                text="Interested? Contact me!"
-                href="/#contact"
-              />
-            </div>
-
-            <ul class="projects-page__list" aria-label="Featured projects">
-              <misaliba-project-card
-                type="page-inprogress"
-                number="01"
-                name="Arsenus"
-                description="Discord bot focused on useful server features, automation, and a workflow that favors functionality over profitability."
-              >
-                <ul
-                  class="project-card__highlights"
-                  aria-label="Arsenus highlights"
-                >
-                  <li>Bot-first backend work in Go</li>
-                  <li>Dashboard ideas with React and TypeScript</li>
-                  <li>Persistent data with PostgreSQL</li>
-                </ul>
-                <ul
-                  class="project-card__tags"
-                  aria-label="Technologies used for Arsenus"
-                >
-                  <misaliba-role-card name="Go" color="blue" />
-                  <misaliba-role-card name="React" color="yellow" />
-                  <misaliba-role-card name="TypeScript" color="purple" />
-                  <misaliba-role-card name="Arsenus Script" color="pink" />
-                  <misaliba-role-card name="PostgreSQL" color="purple" />
-                </ul>
-              </misaliba-project-card>
-
-              <misaliba-project-card
-                type="page-live"
-                number="02"
-                name="misaliba.eu"
-                description="Personal portfolio built to present my profile, technology stack, and projects in a fast static website."
-                aria-label="Technologies used for misaliba.eu"
-              >
-                <misaliba-role-card name="TypeScript" color="blue" />
-                <misaliba-role-card name="JavaScript" color="yellow" />
-                <misaliba-role-card name="HTML" color="orange" />
-                <misaliba-role-card name="CSS" color="purple" />
-              </misaliba-project-card>
-
-              <misaliba-project-card
-                type="page-planned"
-                number="03"
-                name="michlip.eu"
-                description="Privacy-focused web project exploring cleaner user experiences, practical backend architecture, and responsible data handling."
-                aria-label="Technologies used for michlip.eu"
-              >
+              <ul class="project-card__tags" aria-label="Technologies used for Arsenus">
                 <misaliba-role-card name="Go" color="blue" />
                 <misaliba-role-card name="React" color="yellow" />
                 <misaliba-role-card name="TypeScript" color="purple" />
+                <misaliba-role-card name="Arsenus Script" color="pink" />
                 <misaliba-role-card name="PostgreSQL" color="purple" />
-              </misaliba-project-card>
-            </ul>
-          </div>
-        </section>
+              </ul>
+            </misaliba-project-card>
 
-        <section class="project-process" aria-labelledby="process-heading">
-          <div class="container">
-            <p class="meta">BUILD STYLE</p>
-            <h2 id="process-heading">How I approach projects</h2>
-            <div class="project-process__grid grid-script">
-              <misaliba-project-process-card
-                icon="fas fa-layer-group"
-                title="Structure first"
-              >
-                I like projects with a clear backend shape, predictable data,
-                and room to grow without making simple features painful.
-              </misaliba-project-process-card>
-              <misaliba-project-process-card
-                icon="fas fa-gauge-high"
-                title="Fast by default"
-              >
-                Static pages, focused APIs, and small interfaces keep the work
-                practical and pleasant to use.
-              </misaliba-project-process-card>
-              <misaliba-project-process-card
-                icon="fas fa-shield-halved"
-                title="Respectful data"
-              >
-                I prefer building with privacy and control in mind, especially
-                when projects collect or store user information.
-              </misaliba-project-process-card>
-              <misaliba-project-process-card
-                icon="fas fa-shield-halved"
-                title="Scalable"
-              >
-                I consistently design projects that are scalable to accommodate
-                increasing traffic.
-              </misaliba-project-process-card>
-            </div>
-            <misaliba-button
-              icon="fas fa-arrow-right"
-              text="See my skills"
-              href="/skills"
-            />
+            <misaliba-project-card type="page-live" number="02" name="misaliba.eu"
+              description="Personal portfolio built to present my profile, technology stack, and projects in a fast static website."
+              aria-label="Technologies used for misaliba.eu">
+              <misaliba-role-card name="TypeScript" color="blue" />
+              <misaliba-role-card name="JavaScript" color="yellow" />
+              <misaliba-role-card name="HTML" color="orange" />
+              <misaliba-role-card name="CSS" color="purple" />
+            </misaliba-project-card>
+
+            <misaliba-project-card type="page-planned" number="03" name="michlip.eu"
+              description="Privacy-focused web project exploring cleaner user experiences, practical backend architecture, and responsible data handling."
+              aria-label="Technologies used for michlip.eu">
+              <misaliba-role-card name="Go" color="blue" />
+              <misaliba-role-card name="React" color="yellow" />
+              <misaliba-role-card name="TypeScript" color="purple" />
+              <misaliba-role-card name="PostgreSQL" color="purple" />
+            </misaliba-project-card>
+          </ul>
+        </div>
+      </section>
+
+      <section class="project-process" aria-labelledby="process-heading">
+        <div class="container">
+          <p class="meta">BUILD STYLE</p>
+          <h2 id="process-heading">How I approach projects</h2>
+          <div class="project-process__grid grid-script">
+            <misaliba-project-process-card icon="fas fa-layer-group" title="Structure first">
+              I like projects with a clear backend shape, predictable data,
+              and room to grow without making simple features painful.
+            </misaliba-project-process-card>
+            <misaliba-project-process-card icon="fas fa-gauge-high" title="Fast by default">
+              Static pages, focused APIs, and small interfaces keep the work
+              practical and pleasant to use.
+            </misaliba-project-process-card>
+            <misaliba-project-process-card icon="fas fa-shield-halved" title="Respectful data">
+              I prefer building with privacy and control in mind, especially
+              when projects collect or store user information.
+            </misaliba-project-process-card>
+            <misaliba-project-process-card icon="fas fa-shield-halved" title="Scalable">
+              I consistently design projects that are scalable to accommodate
+              increasing traffic.
+            </misaliba-project-process-card>
           </div>
-        </section>
-      </main>
-      <misaliba-footer />
-    </div>
-  </body>
+          <misaliba-button icon="fas fa-arrow-right" text="See my skills" href="/skills" />
+        </div>
+      </section>
+    </main>
+    <misaliba-footer />
+  </div>
+</body>
+
 </html>
