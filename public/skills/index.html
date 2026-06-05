@@ -1,102 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skills | misaliba</title>
 
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <link rel="stylesheet" href="/assets/styles/home.css">
-    <link rel="stylesheet" href="/assets/styles/skills.css">
+    <link rel="stylesheet" href="/assets/styles/main.css" />
+    <link rel="stylesheet" href="/assets/styles/home.css" />
+    <link rel="stylesheet" href="/assets/styles/skills.css" />
     <misaliba-head />
-    <meta property="og:url" content="https://misaliba.gambaaa.fun/skills">
-    <link rel="canonical" href="https://misaliba.gambaaa.fun/skills">
-    <meta name="description"
-        content="Skills and technologies used by misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, Docker, and web development.">
-    <meta property="og:title" content="Skills | misaliba">
-    <meta property="og:description"
-        content="Overview of technologies, programming languages, frameworks, tools, and platforms used by misaliba.">
-    <meta property="og:url" content="https://misaliba.gambaaa.fun/skills">
-    <meta name="twitter:title" content="Skills | misaliba">
-    <meta name="twitter:description"
-        content="Overview of technologies, programming languages, frameworks, tools, and platforms used by misaliba.">
-    <link rel="canonical" href="https://misaliba.gambaaa.fun/skills">
+    <meta property="og:url" content="https://misaliba.gambaaa.fun/skills" />
+    <link rel="canonical" href="https://misaliba.gambaaa.fun/skills" />
+    <meta
+      name="description"
+      content="Skills and technologies used by misaliba, a developer from Czechia focused on Go, TypeScript, React, PostgreSQL, Redis, Docker, and web development."
+    />
+    <meta property="og:title" content="Skills | misaliba" />
+    <meta
+      property="og:description"
+      content="Overview of technologies, programming languages, frameworks, tools, and platforms used by misaliba."
+    />
+    <meta property="og:url" content="https://misaliba.gambaaa.fun/skills" />
+    <meta name="twitter:title" content="Skills | misaliba" />
+    <meta
+      name="twitter:description"
+      content="Overview of technologies, programming languages, frameworks, tools, and platforms used by misaliba."
+    />
+    <link rel="canonical" href="https://misaliba.gambaaa.fun/skills" />
     <script src="/assets/scripts/skill.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="root">
-        <header>
-            <misaliba-navbar />
-        </header>
+      <header>
+        <misaliba-navbar />
+      </header>
 
-        <main>
-            <section class="skills-techstack" id="techstack" aria-labelledby="tech-heading">
-                <div class="container hero">
-                    <p class="meta">02 — SKILLS</p>
-                    <h1 class="intro" id="tech-heading">Technologies I use</h1>
-                    <p class="lead">List of technologies I use for building projects, and I’m open to learning new ones.
-                    </p>
-                    <ul class="techstack-skills-list" aria-label="Technology skill levels">
-                        <misaliba-skill-slider-group id="languages" title="Languages" more="+8 more" open="true">
-                            <misaliba-skill-slider icon="fab fa-cuttlefish" value="78" name="C/C++" />
-                            <misaliba-skill-slider icon="fab fa-html5" value="40" name="HTML" />
-                            <misaliba-skill-slider icon="fab fa-css3-alt" value="30" name="CSS" />
-                            <misaliba-skill-slider icon="fab fa-js" value="92" name="JavaScript" />
-                            <misaliba-skill-slider icon="fas fa-code" value="92" name="TypeScript" />
-                            <misaliba-skill-slider icon="fas fa-database" value="76" name="SQL" />
-                            <misaliba-skill-slider icon="fab fa-golang" value="64" name="Go" />
-                            <misaliba-skill-slider icon="fab fa-java" value="74" name="Java" />
-                            <misaliba-skill-slider icon="fab fa-php" value="22" name="PHP" />
-                        </misaliba-skill-slider-group>
+      <main>
+        <section
+          class="skills-techstack"
+          id="techstack"
+          aria-labelledby="tech-heading"
+        >
+          <div class="container hero">
+            <div class="skills-techstack__intro">
+              <p class="meta">02 — SKILLS</p>
+              <h1 class="intro" id="tech-heading">Technologies I use</h1>
+              <p class="lead">
+                List of technologies I use for building projects, and I’m open
+                to learning new ones.
+              </p>
+              <misaliba-button
+                icon="fas fa-arrow-right"
+                text="Interested? Contact me!"
+                href="/skills"
+              />
+            </div>
+            <ul
+              class="techstack-skills-list"
+              aria-label="Technology skill levels"
+            >
+              <misaliba-skill-slider-group
+                id="languages"
+                title="Languages"
+                more="+8 more"
+                open="true"
+              >
+                <misaliba-skill-slider
+                  icon="fab fa-cuttlefish"
+                  value="78"
+                  name="C/C++"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-html5"
+                  value="40"
+                  name="HTML"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-css3-alt"
+                  value="30"
+                  name="CSS"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-js"
+                  value="92"
+                  name="JavaScript"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-code"
+                  value="92"
+                  name="TypeScript"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-database"
+                  value="76"
+                  name="SQL"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-golang"
+                  value="64"
+                  name="Go"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-java"
+                  value="74"
+                  name="Java"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-php"
+                  value="22"
+                  name="PHP"
+                />
+              </misaliba-skill-slider-group>
 
-                        <misaliba-skill-slider-group id="frameworks" title="Frameworks" more="+6 more">
-                            <misaliba-skill-slider icon="fab fa-react" value="55" name="React" />
-                            <misaliba-skill-slider icon="fab fa-react" value="54" name="Vite" />
-                            <misaliba-skill-slider icon="fab fa-node-js" value="75" name="Node.js" />
-                            <misaliba-skill-slider icon="fas fa-compass" value="83" name="React Router" />
-                            <misaliba-skill-slider icon="fas fa-compass" value="95" name="Express.js" />
-                            <misaliba-skill-slider icon="fas fa-wind" value="20" name="Tailwind CSS" />
-                            <misaliba-skill-slider icon="fab fa-laravel" value="10" name="Laravel" />
-                        </misaliba-skill-slider-group>
+              <misaliba-skill-slider-group
+                id="frameworks"
+                title="Frameworks"
+                more="+6 more"
+              >
+                <misaliba-skill-slider
+                  icon="fab fa-react"
+                  value="55"
+                  name="React"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-react"
+                  value="54"
+                  name="Vite"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-node-js"
+                  value="75"
+                  name="Node.js"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-compass"
+                  value="83"
+                  name="React Router"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-compass"
+                  value="95"
+                  name="Express.js"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-wind"
+                  value="20"
+                  name="Tailwind CSS"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-laravel"
+                  value="10"
+                  name="Laravel"
+                />
+              </misaliba-skill-slider-group>
 
-                        <misaliba-skill-slider-group id="technologies" title="Technologies" more="+6 more">
-                            <misaliba-skill-slider icon="fab fa-linux" value="80" name="Linux" />
-                            <misaliba-skill-slider icon="fab fa-apple" value="21" name="macOS" />
-                            <misaliba-skill-slider icon="fab fa-windows" value="56" name="Windows" />
-                            <misaliba-skill-slider icon="fas fa-database" value="43" name="PostgreSQL" />
-                            <misaliba-skill-slider icon="fas fa-server" value="40" name="Redis" />
-                            <misaliba-skill-slider icon="fas fa-cloud" value="10" name="Cloudflare" />
-                            <misaliba-skill-slider icon="fab fa-discord" value="30" name="Discord API" />
-                        </misaliba-skill-slider-group>
+              <misaliba-skill-slider-group
+                id="technologies"
+                title="Technologies"
+                more="+6 more"
+              >
+                <misaliba-skill-slider
+                  icon="fab fa-linux"
+                  value="80"
+                  name="Linux"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-apple"
+                  value="21"
+                  name="macOS"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-windows"
+                  value="56"
+                  name="Windows"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-database"
+                  value="43"
+                  name="PostgreSQL"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-server"
+                  value="40"
+                  name="Redis"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-cloud"
+                  value="10"
+                  name="Cloudflare"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-discord"
+                  value="30"
+                  name="Discord API"
+                />
+              </misaliba-skill-slider-group>
 
-                        <misaliba-skill-slider-group id="tools" title="Tools" more="+7 more">
-                            <misaliba-skill-slider icon="fab fa-git" value="30" name="Git" />
-                            <misaliba-skill-slider icon="fas fa-code" value="70" name="VS Code" />
-                            <misaliba-skill-slider icon="fab fa-github" value="78" name="GitHub" />
-                            <misaliba-skill-slider icon="fab fa-gitlab" value="21" name="GitLab" />
-                            <misaliba-skill-slider icon="fab fa-docker" value="32" name="Docker" />
-                            <misaliba-skill-slider icon="fab fa-windows" value="10" name="Windows Active Directory" />
-                            <misaliba-skill-slider icon="fas fa-earth-europe" value="15" name="LDAP" />
-                        </misaliba-skill-slider-group>
+              <misaliba-skill-slider-group
+                id="tools"
+                title="Tools"
+                more="+7 more"
+              >
+                <misaliba-skill-slider
+                  icon="fab fa-git"
+                  value="30"
+                  name="Git"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-code"
+                  value="70"
+                  name="VS Code"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-github"
+                  value="78"
+                  name="GitHub"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-gitlab"
+                  value="21"
+                  name="GitLab"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-docker"
+                  value="32"
+                  name="Docker"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-windows"
+                  value="10"
+                  name="Windows Active Directory"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-earth-europe"
+                  value="15"
+                  name="LDAP"
+                />
+              </misaliba-skill-slider-group>
 
-                        <misaliba-skill-slider-group id="application-development" title="Application Development"
-                            more="+3 more">
-                            <misaliba-skill-slider icon="fab fa-apple" value="2" name="Apple" />
-                            <misaliba-skill-slider icon="fab fa-android" value="20" name="Android" />
-                            <misaliba-skill-slider icon="fab fa-html5" value="50"
-                                name="Progressive Web Applications (PWA)" />
-                            <misaliba-skill-slider icon="fas fa-tv" value="0" name="Tizen" />
-                        </misaliba-skill-slider-group>
-                    </ul>
-                    <misaliba-button icon="fas fa-arrow-right" text="Interested? Contact me!" href="/skills" />
-
-                </div>
-            </section>
-        </main>
-        <misaliba-footer />
+              <misaliba-skill-slider-group
+                id="application-development"
+                title="Application Development"
+                more="+3 more"
+              >
+                <misaliba-skill-slider
+                  icon="fab fa-apple"
+                  value="2"
+                  name="Apple"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-android"
+                  value="20"
+                  name="Android"
+                />
+                <misaliba-skill-slider
+                  icon="fab fa-html5"
+                  value="50"
+                  name="Progressive Web Applications (PWA)"
+                />
+                <misaliba-skill-slider
+                  icon="fas fa-tv"
+                  value="0"
+                  name="Tizen"
+                />
+              </misaliba-skill-slider-group>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <misaliba-footer />
     </div>
-</body>
-
+  </body>
 </html>

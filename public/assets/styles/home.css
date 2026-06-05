@@ -1,45 +1,16 @@
-@layer component {
+@layer layout {
   .hero {
-    padding-bottom: 3.5rem;
-    color: var(--text);
     width: 100%;
     max-width: 38.75rem;
     margin: auto;
+    padding-bottom: 3.5rem;
   }
+
   .home {
     min-height: 100vh;
     align-content: center;
   }
-  .hero .meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: var(--text-highlight);
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-    margin: 0 0 1.5rem 0;
-  }
-  .hero .meta-bar {
-    display: block;
-    flex: 0 0 2.75rem;
-    width: 2.75rem;
-    height: 0.25rem;
-    background: var(--text-highlight);
-    border-radius: 0.25rem;
-  }
-  .hero .intro {
-    font-size: 3rem;
-    font-weight: 300;
-    color: var(--text-heading);
-    line-height: 1;
-    margin: 0 0 1.125rem 0;
-  }
-  .hero .lead {
-    color: var(--text);
-    font-size: 1rem;
-    margin: 0;
-    opacity: 0.95;
-  }
+
   .home .container {
     display: flex;
     flex-direction: column;
@@ -53,43 +24,69 @@
     grid-auto-rows: minmax(0, auto);
     grid-auto-flow: dense;
     gap: 1rem;
-    padding: 1rem 0;
+    width: 100%;
     margin: 0;
+    padding: 1rem 0;
+  }
+
+  .section-copy {
     width: 100%;
   }
 
-  .home .skillcards > .is-alone-row {
-    grid-column: 1 / -1;
-  }
   .skills-list {
-    padding: 0;
     margin: 2rem 0;
+    padding: 0;
   }
 
   .techstack,
-  .projects {
+  .projects,
+  .contact {
     min-height: 100vh;
     padding-block: 2rem 3rem;
   }
 
+  .techstack .hero,
+  .projects .hero,
+  .contact .hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .techstack .section-copy,
+  .projects .section-copy,
+  .contact .section-copy {
+    display: contents;
+  }
+
+  .techstack .section-copy .meta,
+  .techstack .section-copy .intro,
+  .techstack .section-copy .lead,
+  .projects .section-copy .meta,
+  .projects .section-copy .intro,
+  .projects .section-copy .lead,
+  .contact .section-copy .meta,
+  .contact .section-copy .intro,
+  .contact .section-copy .lead {
+    order: 1;
+  }
+
   .techstack .skills-list,
-  .projects .project-list {
+  .projects .project-list,
+  .contact .contact-list {
+    order: 2;
     width: 100%;
-    padding: 0;
     margin: 2rem 0;
+    padding: 0;
     list-style: none;
   }
 
-  .techstack .skill-slider,
-  .projects .project-card {
-    padding: 1rem;
-    border: 0.0625rem solid var(--card-stroke);
-    border-radius: 0.5rem;
-    background: color-mix(
-      in srgb,
-      var(--background) 62%,
-      var(--card-background)
-    );
+  .techstack .section-copy misaliba-button,
+  .techstack .section-copy .button,
+  .projects .section-copy misaliba-button,
+  .projects .section-copy .button,
+  .contact .section-copy misaliba-button,
+  .contact .section-copy .button {
+    order: 3;
   }
 
   @media screen and (min-width: 768px) {
@@ -99,6 +96,7 @@
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .home .skillcards {
       grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
     }
@@ -108,6 +106,12 @@
     .home .container {
       flex-wrap: nowrap;
     }
+
+    .home .user-card {
+      position: sticky;
+      top: 2rem;
+    }
+
     .home .skillcards {
       grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     }
@@ -115,12 +119,14 @@
 
   @media screen and (min-width: 900px) {
     .techstack,
-    .projects {
+    .projects,
+    .contact {
       padding-block: 4rem 5rem;
     }
 
     .techstack .hero,
-    .projects .hero {
+    .projects .hero,
+    .contact .hero {
       display: grid;
       grid-template-columns: minmax(20rem, 0.8fr) minmax(0, 1.2fr);
       column-gap: clamp(2rem, 5vw, 4.5rem);
@@ -139,33 +145,37 @@
     .projects .intro,
     .projects .lead,
     .projects misaliba-button,
-    .projects .button {
+    .projects .button,
+    .contact .meta,
+    .contact .intro,
+    .contact .lead,
+    .contact misaliba-button,
+    .contact .button {
       grid-column: 1;
     }
 
-    .techstack .intro,
-    .projects .intro {
-      max-width: 9ch;
-      font-size: clamp(3rem, 4.2vw, 4.5rem);
-      line-height: 1;
-      overflow-wrap: normal;
-    }
-
-    .techstack .lead,
-    .projects .lead {
-      max-width: 24rem;
-      font-size: 1.05rem;
-      line-height: 1.75;
+    .techstack .section-copy,
+    .projects .section-copy,
+    .contact .section-copy {
+      position: sticky;
+      top: 2rem;
+      display: grid;
+      grid-column: 1;
+      gap: 1.25rem;
+      align-self: start;
     }
 
     .techstack .button,
-    .projects .button {
+    .projects .button,
+    .contact .button {
+      grid-column: 1;
       justify-self: start;
       margin-inline: 0;
     }
 
     .techstack .skills-list,
-    .projects .project-list {
+    .projects .project-list,
+    .contact .contact-list {
       display: grid;
       grid-column: 2;
       grid-row: 1 / span 5;
@@ -173,6 +183,7 @@
       gap: 1rem;
       margin: 0;
     }
+
     .techstack .skills-list li {
       margin: 0;
     }
@@ -184,31 +195,197 @@
     .projects .project-list {
       grid-template-columns: minmax(0, 1fr);
     }
+
+    .contact .contact-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media screen and (min-width: 1180px) {
     .techstack .hero,
-    .projects .hero {
+    .projects .hero,
+    .contact .hero {
       grid-template-columns: minmax(24rem, 0.78fr) minmax(0, 1.22fr);
     }
   }
+}
 
-  @media print {
-    .hero .meta-bar {
-      display: none;
+@layer typography {
+  .hero {
+    color: var(--text);
+  }
+
+  .hero .meta {
+    color: var(--text-highlight);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero .intro {
+    color: var(--text-heading);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .hero .lead {
+    color: var(--text);
+    font-size: 1rem;
+    opacity: 0.95;
+  }
+
+  @media screen and (min-width: 900px) {
+    .techstack .intro,
+    .projects .intro,
+    .contact .intro {
+      max-width: 9ch;
+      font-size: clamp(3rem, 4.2vw, 4.5rem);
+      line-height: 1;
+      overflow-wrap: normal;
     }
-    .hero {
-      break-before: page;
+
+    .techstack .lead,
+    .projects .lead,
+    .contact .lead {
+      max-width: 24rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
     }
-    .home .skillcards > .is-alone-row {
-      grid-column: unset;
+  }
+}
+
+@layer components {
+  .hero .meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .hero .meta-bar {
+    display: block;
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    background: var(--text-highlight);
+  }
+
+  .hero .intro {
+    margin: 0 0 1.125rem;
+  }
+
+  .hero .lead {
+    margin: 0;
+  }
+
+  .techstack .skill-slider,
+  .projects .project-card {
+    padding: 1rem;
+    border: 0.0625rem solid var(--card-stroke);
+    border-radius: 0.5rem;
+    background: color-mix(
+      in srgb,
+      var(--background) 62%,
+      var(--card-background)
+    );
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 6rem;
+    padding: 1rem;
+    border: 0.0625rem solid var(--card-stroke);
+    border-radius: 0.5rem;
+    background:
+      linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--text-highlight) 12%, transparent),
+        transparent 42%
+      ),
+      color-mix(in srgb, var(--background) 62%, var(--card-background));
+    color: var(--white);
+    text-decoration: none;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .contact-card:hover,
+  .contact-card:focus-visible {
+    border-color: color-mix(in srgb, var(--text-highlight) 70%, var(--white));
+    transform: translateY(-0.125rem);
+  }
+
+  .contact-card i {
+    position: relative;
+    display: block;
+    flex: 0 0 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.5rem;
+    background: color-mix(in srgb, var(--text-highlight) 16%, transparent);
+    color: var(--text-highlight);
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .contact-card i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    line-height: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .contact-card span {
+    display: grid;
+    min-width: 0;
+    gap: 0.25rem;
+  }
+
+  .contact-card strong,
+  .contact-card small {
+    overflow-wrap: anywhere;
+  }
+
+  .contact-card strong {
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.1;
+  }
+
+  .contact-card small {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  @media screen and (min-width: 900px) {
+    .techstack .section-copy .meta,
+    .projects .section-copy .meta,
+    .contact .section-copy .meta {
+      margin-bottom: 0.25rem;
     }
-    .hero .intro,
-    .hero,
-    .hero .lead {
-      color: #000000 !important;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
+
+    .techstack .section-copy .intro,
+    .projects .section-copy .intro,
+    .contact .section-copy .intro,
+    .techstack .section-copy .lead,
+    .projects .section-copy .lead,
+    .contact .section-copy .lead {
+      margin-bottom: 0;
     }
+  }
+}
+
+@layer utilities {
+  .home .skillcards > .is-alone-row,
+  .grid-script > .is-alone-row {
+    grid-column: 1 / -1;
   }
 }

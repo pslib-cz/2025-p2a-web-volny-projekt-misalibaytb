@@ -1,30 +1,73 @@
-[component:project-card;*type,name,description,&tags,*aria-label]
+[component:project-card;*type,name,description,&content,*aria-label,*number,*href,*link-text,*link-label]
 <li class="project-card">
-    <div class="project-card__status-bar"></div>
-    <p class="project-card__status">Planned</p>
-    <h3 class="project-card__title">{name}</h3>
-    <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [aria-label]>
-        {tags}
-    </ul>
+  <div class="project-card__status-bar"></div>
+  <p class="project-card__status">Planned</p>
+  <h3 class="project-card__title">{name}</h3>
+  <p class="project-card__description">{description}</p>
+  <ul class="project-card__tags" [aria-label]>
+    {content}
+  </ul>
 </li>
 (type=live)
 <li class="project-card live">
-    <div class="project-card__status-bar"></div>
-    <p class="project-card__status">Live</p>
-    <h3 class="project-card__title">{name}</h3>
-    <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [aria-label]>
-        {tags}
-    </ul>
+  <div class="project-card__status-bar"></div>
+  <p class="project-card__status">Live</p>
+  <h3 class="project-card__title">{name}</h3>
+  <p class="project-card__description">{description}</p>
+  <ul class="project-card__tags" [aria-label]>
+    {content}
+  </ul>
 </li>
 (type=inprogress)
 <li class="project-card inprogress">
-    <div class="project-card__status-bar"></div>
+  <div class="project-card__status-bar"></div>
+  <p class="project-card__status">In Progress</p>
+  <h3 class="project-card__title">{name}</h3>
+  <p class="project-card__description">{description}</p>
+  <ul class="project-card__tags" [aria-label]>
+    {content}
+  </ul>
+</li>
+(type=page-planned)
+<li class="project-card">
+  <div class="project-card__status-bar"></div>
+  <div class="project-card__header">
+    <p class="project-card__status">Planned</p>
+    <span class="project-card__number">{number}</span>
+  </div>
+  <h2 class="project-card__title">{name}</h2>
+  <p class="project-card__description">{description}</p>
+  <ul class="project-card__tags" [aria-label]>
+    {content}
+  </ul>
+</li>
+(type=page-live)
+<li class="project-card live">
+  <div class="project-card__status-bar"></div>
+  <div class="project-card__header">
+    <p class="project-card__status">Live</p>
+    <span class="project-card__number">{number}</span>
+  </div>
+  <h2 class="project-card__title">{name}</h2>
+  <p class="project-card__description">{description}</p>
+  <ul class="project-card__tags" [aria-label]>
+    {content}
+  </ul>
+  <div class="project-card__actions">
+    <a href="{href}" aria-label="{link-label}">
+      <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+      {link-text}
+    </a>
+  </div>
+</li>
+(type=page-inprogress)
+<li class="project-card project-card--featured inprogress">
+  <div class="project-card__status-bar"></div>
+  <div class="project-card__header">
     <p class="project-card__status">In Progress</p>
-    <h3 class="project-card__title">{name}</h3>
-    <p class="project-card__description">{description}</p>
-    <ul class="project-card__tags" [aria-label]>
-        {tags}
-    </ul>
+    <span class="project-card__number">{number}</span>
+  </div>
+  <h2 class="project-card__title">{name}</h2>
+  <p class="project-card__description">{description}</p>
+  {content}
 </li>

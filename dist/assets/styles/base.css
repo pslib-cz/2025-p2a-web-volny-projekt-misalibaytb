@@ -90,9 +90,6 @@
   *::after {
     box-sizing: border-box;
   }
-  html {
-    font-family: "DM Sans", sans-serif;
-  }
   html,
   body,
   #root {
@@ -101,83 +98,10 @@
     background: var(--background);
     scroll-behavior: smooth;
   }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  h4 {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  h5 {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  p {
-    font-size: 1rem;
-  }
-  a {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    color: var(--text-hyperlink);
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 0.18em;
-    transition:
-      color 0.3s ease-in-out,
-      text-shadow 0.3s ease-in-out;
-  }
-  a:hover {
-    color: var(--text-hyperlink-hover);
-    text-shadow:
-      0 0 0.4rem var(--text-hyperlink-hover),
-      0 0 1.5rem
-        color-mix(in srgb, var(--text-hyperlink-hover) 60%, transparent);
-  }
-  strong {
-    color: var(--text-highlight);
-  }
-  .container {
-    max-width: 75rem;
-    width: 100%;
-    margin: auto;
-    padding: 1rem 1rem;
-  }
-
   ul,
   ol {
     padding: 0;
     margin: 0;
     list-style: none;
-  }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-  @media print {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    b,
-    strong,
-    span {
-      color: #000000;
-    }
   }
 }

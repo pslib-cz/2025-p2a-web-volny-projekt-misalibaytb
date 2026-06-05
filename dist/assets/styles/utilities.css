@@ -1,4 +1,18 @@
 @layer utilities {
+  .home .skillcards > .is-alone-row,
+  .grid-script > .is-alone-row {
+    grid-column: 1 / -1;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   .project-card.live {
     --this-status: var(--green);
   }

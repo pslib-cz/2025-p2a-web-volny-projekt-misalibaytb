@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .role-card {
     font-family: "Inter", sans-serif;
     font-size: 0.875rem;
@@ -12,7 +12,7 @@
   }
 }
 
-@layer utility {
+@layer utilities {
   .role-card.blue {
     --this-background: var(--blue-card-background);
     --this-stroke: var(--blue-card-stroke);

@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .skill-slider-group {
     padding: 1rem 0;
   }
@@ -46,7 +46,7 @@
     opacity: 1;
     transform: translateY(0);
     max-height: 10rem;
-    margin-block: var(--this-margin, 0.5rem);
+    margin-block: var(--this-margin, 0.5rem) 0;
     visibility: visible;
     overflow: hidden;
     pointer-events: auto;

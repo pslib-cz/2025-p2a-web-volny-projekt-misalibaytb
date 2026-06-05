@@ -1,0 +1,320 @@
+@layer layout {
+  .projects-page {
+    min-height: 100vh;
+    padding-block: 2rem 3rem;
+  }
+
+  .projects-page .hero,
+  .project-process .container {
+    max-width: 70rem;
+  }
+
+  .projects-page__intro {
+    width: 100%;
+  }
+
+  .projects-page__stats,
+  .projects-page__list,
+  .project-card__highlights,
+  .project-process__grid {
+    display: grid;
+  }
+
+  .projects-page__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .projects-page__list,
+  .project-process__grid {
+    gap: 1rem;
+  }
+
+  .projects-page__list {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .projects-page .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+  }
+
+  .project-card__header,
+  .project-card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .project-card__highlights {
+    gap: 0.6rem;
+    margin: 1rem 0;
+  }
+
+  .project-card__highlights li {
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .projects-page .project-card__tags {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+
+  .project-card__actions {
+    margin-top: 1rem;
+  }
+
+  .project-card__actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .project-process {
+    padding-block: 2rem 4rem;
+  }
+
+  .project-process__grid {
+    margin: 2rem 0;
+  }
+
+  @media screen and (min-width: 760px) {
+    .projects-page__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-page .project-card--featured {
+      grid-column: 1 / -1;
+    }
+
+    .project-process__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    .projects-page {
+      padding-block: 4rem 5rem;
+    }
+
+    .projects-page .hero {
+      display: grid;
+      grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1.28fr);
+      column-gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+      padding-block: 4rem;
+    }
+
+    .projects-page__intro {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .projects-page__list {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      margin-top: 0;
+    }
+
+    .project-process .container {
+      display: grid;
+      grid-template-columns: minmax(18rem, 0.55fr) minmax(0, 1.45fr);
+      gap: 1rem 3rem;
+      align-items: start;
+    }
+
+    .project-process .meta,
+    .project-process h2,
+    .project-process misaliba-button,
+    .project-process .button {
+      grid-column: 1;
+    }
+
+    .project-process__grid {
+      grid-column: 2;
+      grid-row: 1 / span 4;
+      margin: 0;
+    }
+
+    .project-process .button {
+      justify-self: start;
+      margin-inline: 0;
+    }
+  }
+}
+
+@layer typography {
+  .projects-page__stats strong {
+    color: var(--white);
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  .projects-page__stats span {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .project-card__number {
+    color: color-mix(in srgb, var(--white) 28%, transparent);
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.35rem;
+  }
+
+  .projects-page .project-card__title {
+    font-size: clamp(1.65rem, 5vw, 2.4rem);
+    line-height: 1.05;
+  }
+
+  .projects-page .project-card__description,
+  .project-card__highlights,
+  .project-process p {
+    color: var(--text);
+  }
+
+  .projects-page .project-card__description,
+  .project-process p {
+    line-height: 1.65;
+  }
+
+  .project-card__highlights li {
+    line-height: 1.45;
+  }
+
+  .project-card__actions a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .project-process .meta {
+    color: var(--text-highlight);
+    letter-spacing: 0.08em;
+  }
+
+  .project-process h2 {
+    color: var(--white);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .project-process article > i {
+    color: var(--text-highlight);
+    font-size: 1.35rem;
+  }
+
+  .project-process h3 {
+    color: var(--white);
+  }
+
+  @media screen and (min-width: 980px) {
+    .projects-page .intro {
+      max-width: 9ch;
+      font-size: clamp(3.2rem, 5vw, 5rem);
+      line-height: 1;
+    }
+
+    .projects-page .lead {
+      max-width: 24rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+  }
+}
+
+@layer components {
+  .projects-page__stats article,
+  .project-process article {
+    border: 0.0625rem solid var(--card-stroke);
+    border-radius: 0.5rem;
+    background: color-mix(
+      in srgb,
+      var(--background) 58%,
+      var(--card-background)
+    );
+  }
+
+  .projects-page__stats article,
+  .project-process article {
+    padding: 1rem;
+  }
+
+  .projects-page__stats article {
+    min-width: 0;
+  }
+
+  .projects-page__stats strong,
+  .projects-page__stats span {
+    display: block;
+  }
+
+  .projects-page__stats span {
+    margin-top: 0.45rem;
+  }
+
+  .projects-page .project-card {
+    border-width: 0.0625rem;
+    border-radius: 0.5rem;
+    background:
+      linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--this-status, var(--blue)) 12%, transparent),
+        transparent 34%
+      ),
+      var(--card-background);
+    box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.18);
+  }
+
+  .projects-page .project-card--featured {
+    background:
+      linear-gradient(
+        145deg,
+        color-mix(in srgb, var(--pink) 18%, transparent),
+        transparent 45%
+      ),
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--card-background) 88%, var(--purple)),
+        var(--card-background)
+      );
+  }
+
+  .project-card__highlights li::before {
+    content: "";
+    position: absolute;
+    top: 0.65em;
+    left: 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+    background: var(--this-status, var(--pink));
+  }
+
+  .project-process .meta {
+    margin: 0 0 1rem;
+  }
+
+  .project-process h2 {
+    max-width: 12ch;
+    margin: 0;
+  }
+
+  .project-process h3 {
+    margin: 1rem 0 0.55rem;
+  }
+
+  .project-process p {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 980px) {
+    .projects-page .project-card--featured {
+      min-height: 28rem;
+    }
+  }
+}

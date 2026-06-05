@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .user-card {
     display: flex;
     max-width: 23.75rem;
@@ -83,21 +83,5 @@
     margin-top: 0;
     color: var(--white);
     font-size: 0.875rem;
-  }
-  @media print {
-    .user-card {
-      break-after: page;
-      page-break-after: always;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    .user-card * {
-      color: #000000;
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-    .user-card .bio .username::before {
-      all: unset;
-    }
   }
 }

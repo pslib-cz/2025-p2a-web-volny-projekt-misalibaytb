@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .project-card {
     position: relative;
     width: 100%;
@@ -43,7 +43,7 @@
   }
 }
 
-@layer utility {
+@layer utilities {
   .project-card.live {
     --this-status: var(--green);
   }

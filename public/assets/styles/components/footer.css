@@ -1,15 +1,15 @@
-@layer component {
+@layer layout {
   footer {
     width: 100%;
+    padding: 2rem 0;
+  }
+}
+
+@layer typography {
+  footer {
     color: var(--white);
     font-family: "Pixelify Sans", sans-serif;
     font-size: 1rem;
     text-align: center;
-    padding: 2rem 0;
-  }
-  @media print {
-    footer {
-      display: none;
-    }
   }
 }

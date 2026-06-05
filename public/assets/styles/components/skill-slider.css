@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .skill-slider {
     width: 100%;
     --this-margin: 1rem;
@@ -58,22 +58,8 @@
     background: var(--separator);
   }
 
-  .skill-slider__bar::-webkit-meter-optimum-value {
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--blue), #d1b8ff);
-    transform: scaleX(var(--skill-fill-scale));
-    transform-origin: left center;
-    transition: transform 3s ease var(--skill-fill-delay, 0s);
-  }
-
-  .skill-slider__bar::-webkit-meter-suboptimum-value {
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--blue), #d1b8ff);
-    transform: scaleX(var(--skill-fill-scale));
-    transform-origin: left center;
-    transition: transform 3s ease var(--skill-fill-delay, 0s);
-  }
-
+  .skill-slider__bar::-webkit-meter-optimum-value,
+  .skill-slider__bar::-webkit-meter-suboptimum-value,
   .skill-slider__bar::-webkit-meter-even-less-good-value {
     border-radius: 999px;
     background: linear-gradient(90deg, var(--blue), #d1b8ff);
@@ -84,19 +70,5 @@
 
   .skill-slider__bar.is-filled {
     --skill-fill-scale: 1;
-  }
-
-  @media print {
-    .skill-slider__icon,
-    .skill-slider__name,
-    .skill-slider__value {
-      color: #000000;
-    }
-    .skill-slider__bar {
-      background: #000 !important;
-      box-shadow: none !important;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
-    }
   }
 }

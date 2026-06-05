@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
@@ -73,11 +73,6 @@
   @keyframes aura-spin {
     to {
       --angle: 360deg;
-    }
-  }
-  @media print {
-    .button {
-      display: none;
     }
   }
 }

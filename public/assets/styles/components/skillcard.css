@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .skillcard {
     background-color: var(--card-background);
     border-radius: 1rem;

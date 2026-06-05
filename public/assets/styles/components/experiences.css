@@ -1,4 +1,4 @@
-@layer component {
+@layer components {
   .experiencecard {
     background-color: var(--purple-card-background);
     border-radius: 1rem;
