@@ -327,10 +327,11 @@
   .contact-card i {
     position: relative;
     display: block;
+    flex: 0 0 auto;
     width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 0.5rem;
-    background: color-mix(in srgb, var(--text-highlight) 16%, transparent);
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    justify-self: start;
     color: var(--text-highlight);
     font-size: 1.35rem;
     line-height: 1;
@@ -340,8 +341,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    display: block;
+    display: grid;
+    place-items: center;
+    width: 1em;
+    height: 1em;
     line-height: 1;
+    text-align: center;
     transform: translate(-50%, -50%);
   }
 
