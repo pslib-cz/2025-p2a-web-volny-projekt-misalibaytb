@@ -53,6 +53,7 @@
   .projects-page .button {
     order: 3;
     width: fit-content;
+    justify-self: center;
   }
 
   .projects-page .project-card {

@@ -34,11 +34,8 @@
     margin: 0.5rem 0;
   }
   .project-card__tags {
-    display: grid;
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(min(100%, 4rem), max-content)
-    );
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0;
     margin: 0.5rem 0 0 0;
