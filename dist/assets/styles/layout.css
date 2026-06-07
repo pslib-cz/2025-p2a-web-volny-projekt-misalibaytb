@@ -416,7 +416,7 @@
 
   nav .container {
     display: grid;
-    justify-content: center;
+    justify-content: stretch;
     gap: 0;
     padding: 1rem;
   }
@@ -429,11 +429,13 @@
 
   nav .head {
     grid-template-columns: minmax(0, 1fr) auto;
+    justify-content: space-between;
+    width: 100%;
   }
 
   nav .links {
     display: grid;
-    justify-content: center;
+    justify-content: stretch;
     gap: 0.75rem;
     width: 100%;
     max-height: 0;
@@ -452,6 +454,7 @@
   nav .links a {
     grid-template-columns: auto minmax(0, 1fr);
     justify-content: start;
+    text-align: left;
     gap: 0.75rem;
     width: 100%;
     min-height: 2.75rem;
