@@ -54,15 +54,15 @@ The project merges components from `components/` with source files from `public/
 
 To run the script, install `ffmpeg-full` and all required Node modules. Then run:
 
-    node ./index.js
+    bun ./compile.ts
 
 For continuous rebuilds when files change, use:
 
-    node ./index.js watch
+    bun ./compile.ts watch
 
 To inspect how image sizes are generated, add the `--debug-images` flag:
 
-    node ./index.js --debug-images
+    bun ./compile.ts --debug-images
 
 Images are mainly generated as AVIF, with WebP used as a fallback. The script determines the maximum image size and generates variants for different DPI settings.
 
