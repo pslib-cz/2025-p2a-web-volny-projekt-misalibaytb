@@ -9,10 +9,5 @@
   "peerDependencies": {
     "typescript": "^5"
   },
-  "scripts": {
-    "script:build": "bun build ./compile.ts --minify --target=node --outfile=./index.js && bunx javascript-obfuscator ./index.js && rm ./index.js && mv ./index-obfuscated.js ./index.js",
-    "build": "node ./index.js build",
-    "build:dev": "node ./index.js build --watch",
-    "serve": "node ./index.js build --watch"
-  }
+  "scripts": {}
 }
