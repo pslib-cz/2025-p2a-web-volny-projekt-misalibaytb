@@ -1,26 +1,27 @@
 @layer layout {
   nav .container {
-    display: grid;
-    justify-content: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 0;
     padding: 1rem;
   }
 
   nav .head,
   nav .links a {
-    display: grid;
+    display: flex;
     align-items: center;
   }
 
   nav .head {
-    grid-template-columns: minmax(0, 1fr) auto;
     justify-content: space-between;
     width: 100%;
   }
 
   nav .links {
-    display: grid;
-    justify-content: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 0.75rem;
     width: 100%;
     max-height: 0;
@@ -37,7 +38,6 @@
   }
 
   nav .links a {
-    grid-template-columns: auto minmax(0, 1fr);
     justify-content: start;
     text-align: left;
     gap: 0.75rem;
@@ -100,8 +100,9 @@
     right: 1.5rem;
     bottom: 1.5rem;
     z-index: 100;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 3rem;
     height: 3rem;
     padding: 0;
@@ -117,13 +118,11 @@
 
     nav .head {
       justify-content: center;
-      grid-template-columns: auto;
     }
 
     nav .links {
+      flex-direction: row;
       align-items: center;
-      grid-auto-flow: column;
-      grid-auto-columns: max-content;
       justify-content: center;
       gap: 1.25rem;
       max-height: none;
@@ -143,8 +142,8 @@
 
   @media screen and (min-width: 1024px) {
     nav .container {
+      flex-direction: row;
       align-items: center;
-      grid-template-columns: auto minmax(0, 1fr);
       justify-content: space-between;
     }
 
