@@ -2,25 +2,22 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://misaliba.gambaaa.fun/</loc>
-        <lastmod>2026-06-02</lastmod>
+        <lastmod>2026-06-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
-        <lastmod>2026-06-02</lastmod>
     </url>
 
     <url>
         <loc>https://misaliba.gambaaa.fun/projects</loc>
-        <lastmod>2026-06-02</lastmod>
+        <lastmod>2026-06-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
-        <lastmod>2026-06-02</lastmod>
     </url>
 
     <url>
-        <loc>https://misaliba.gambaaa.fun/contact</loc>
-        <lastmod>2026-06-02</lastmod>
+        <loc>https://misaliba.gambaaa.fun/skills</loc>
+        <lastmod>2026-06-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
-        <lastmod>2026-06-02</lastmod>
     </url>
 </urlset>

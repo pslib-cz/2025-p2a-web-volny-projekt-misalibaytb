@@ -55,6 +55,8 @@
 
     .skills-techstack .button {
       justify-self: start;
+      grid-column: 1;
+      grid-row: 2;
       margin-inline: 0;
     }
 
