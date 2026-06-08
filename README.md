@@ -20,9 +20,15 @@ My biggest goal was to make my site somewhat accesible — so there are aria att
 
 _Uveďte konkurenční projekty. Co se vám na nich líbí, co ne? V čem se můžete inspirovat?_
 
-For inspiration, I looked at other personal portfolio websites made by other developers and students. I like when portfolios are simple, fast, and clearly show who the person is, what they can do, and how to contact them. Some portfolios look very modern, but they are often overloaded with animations, huge text, or too many effects, which can make them harder to read.
+To gather ideas, I looked at personal portfolio websites created by other developers and students. I found that I prefer portfolios that are simple, fast to load, and easy to navigate. A good portfolio should clearly show who the person is, what they can do, and how to contact them. Some portfolios look very modern, but they can also become difficult to read when they use too many animations, oversized text, or excessive visual effects.
 
-My portfolio is inspired by those clean developer websites, but I want it to feel more personal and not just like another generic template. The goal is to keep it readable, responsive, and useful, while still showing my own style through colors, typography, cards, and small details.
+I also took inspiration from other students working on the same project. Browsing their websites was easier because we created an AI-generated list of our sites at https://projects.gambaaa.fun.
+
+My portfolio is inspired by clean developer websites, but I also want it to feel personal rather than like a generic template. My goal is to keep the website accessible, readable, responsive, and useful, while still showing my own style through the colors, typography, cards, layout, and small visual details.
+
+https://www.hangerthem.com
+https://skypad6000.eu
+https://discord.com (for user card)
 
 ---
 
