@@ -22,8 +22,6 @@ _Uveďte konkurenční projekty. Co se vám na nich líbí, co ne? V čem se mů
 
 To gather ideas, I looked at personal portfolio websites created by other developers and students. I found that I prefer portfolios that are simple, fast to load, and easy to navigate. A good portfolio should clearly show who the person is, what they can do, and how to contact them. Some portfolios look very modern, but they can also become difficult to read when they use too many animations, oversized text, or excessive visual effects.
 
-I also took inspiration from other students working on the same project. Browsing their websites was easier because we created an AI-generated list of our sites at https://projects.gambaaa.fun.
-
 My portfolio is inspired by clean developer websites, but I also want it to feel personal rather than like a generic template. My goal is to keep the website accessible, readable, responsive, and useful, while still showing my own style through the colors, typography, cards, layout, and small visual details.
 
 https://www.hangerthem.com
