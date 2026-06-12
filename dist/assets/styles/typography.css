@@ -1,53 +1,44 @@
 @layer typography {
+  .hero {
+    color: var(--text);
+  }
+
+  .hero .meta {
+    color: var(--text-highlight);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hero .intro {
+    color: var(--text-heading);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .hero .lead {
+    color: var(--text);
+    font-size: 1rem;
+    opacity: 0.95;
+  }
+
   @media screen and (min-width: 900px) {
-    .skills-techstack .intro {
+    .techstack .intro,
+    .projects .intro,
+    .contact .intro {
       max-width: 9ch;
       font-size: clamp(3rem, 4.2vw, 4.5rem);
       line-height: 1;
       overflow-wrap: normal;
     }
 
-    .skills-techstack .lead {
+    .techstack .lead,
+    .projects .lead,
+    .contact .lead {
       max-width: 24rem;
       font-size: 1.05rem;
       line-height: 1.75;
     }
-  }
-
-  nav,
-  nav a {
-    font-size: 2rem;
-  }
-
-  nav a {
-    font-family: "Pixelify Sans", sans-serif;
-    line-height: 1;
-    text-decoration: none;
-  }
-
-  nav .head a {
-    color: var(--text-highlight);
-  }
-
-  nav .links {
-    text-align: left;
-  }
-
-  nav .links a,
-  .scroll {
-    color: var(--white);
-    text-decoration: none;
-  }
-
-  .scroll {
-    font-size: 1.5rem;
-  }
-
-  footer {
-    color: var(--white);
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 1rem;
-    text-align: center;
   }
 
   .not-found {
@@ -72,54 +63,6 @@
     margin-inline: auto;
     margin-bottom: 2rem;
     text-wrap: pretty;
-  }
-
-  html {
-    font-family: "DM Sans", sans-serif;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  h4 {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  h5 {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  p {
-    font-size: 1rem;
-  }
-  a {
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    color: var(--text-hyperlink);
-    text-decoration-line: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 0.18em;
-    transition:
-      color 0.3s ease-in-out,
-      text-shadow 0.3s ease-in-out;
-  }
-  a:hover {
-    color: var(--text-hyperlink-hover);
-    text-shadow:
-      0 0 0.4rem var(--text-hyperlink-hover),
-      0 0 1.5rem
-        color-mix(in srgb, var(--text-hyperlink-hover) 60%, transparent);
-  }
-  strong {
-    color: var(--text-highlight);
   }
 
   .project-card__number {
@@ -182,42 +125,99 @@
     }
   }
 
-  .hero {
-    color: var(--text);
+  html {
+    font-family: "DM Sans", sans-serif;
   }
-
-  .hero .meta {
-    color: var(--text-highlight);
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-  }
-
-  .hero .intro {
-    color: var(--text-heading);
+  h1 {
     font-size: 3rem;
-    font-weight: 300;
-    line-height: 1;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+  }
+  a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: var(--text-hyperlink);
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 0.18em;
+    transition:
+      color 0.3s ease-in-out,
+      text-shadow 0.3s ease-in-out;
+  }
+  a:hover {
+    color: var(--text-hyperlink-hover);
+    text-shadow:
+      0 0 0.4rem var(--text-hyperlink-hover),
+      0 0 1.5rem
+        color-mix(in srgb, var(--text-hyperlink-hover) 60%, transparent);
+  }
+  strong {
+    color: var(--text-highlight);
   }
 
-  .hero .lead {
-    color: var(--text);
+  nav,
+  nav a {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-family: "Pixelify Sans", sans-serif;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  nav .head a {
+    color: var(--text-highlight);
+  }
+
+  nav .links {
+    text-align: left;
+  }
+
+  nav .links a,
+  .scroll {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .scroll {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    color: var(--white);
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 1rem;
-    opacity: 0.95;
+    text-align: center;
   }
 
   @media screen and (min-width: 900px) {
-    .techstack .intro,
-    .projects .intro,
-    .contact .intro {
+    .skills-techstack .intro {
       max-width: 9ch;
       font-size: clamp(3rem, 4.2vw, 4.5rem);
       line-height: 1;
       overflow-wrap: normal;
     }
 
-    .techstack .lead,
-    .projects .lead,
-    .contact .lead {
+    .skills-techstack .lead {
       max-width: 24rem;
       font-size: 1.05rem;
       line-height: 1.75;

@@ -331,7 +331,7 @@ const logErrorOnce = (key: string, message: string) => {
   logError(message);
 };
 
-const normalizeSiteOrigin = (value: string | undefined) => {
+const normalizeSiteUrl = (value: string | undefined) => {
   const rawValue = value?.trim();
 
   if (!rawValue) {
@@ -345,14 +345,20 @@ const normalizeSiteOrigin = (value: string | undefined) => {
         : `https://${rawValue}`,
     );
 
-    return url.origin;
+    const pathname = url.pathname.replace(/\/+$/, "");
+
+    return {
+      origin: url.origin,
+      basePath: pathname === "/" ? "" : pathname,
+      href: `${url.origin}${pathname === "/" ? "" : pathname}`,
+    };
   } catch {
     logWarning("site-url:invalid", `Invalid site URL ignored: ${rawValue}`);
     return null;
   }
 };
 
-const siteOrigin = normalizeSiteOrigin(
+const siteUrl = normalizeSiteUrl(
   siteUrlArg?.split("=").slice(1).join("=") ??
     process.env.SITE_URL ??
     process.env.SITE_ORIGIN ??
@@ -1182,8 +1188,8 @@ const toRelativeOutputPath = (htmlFile: string, targetPath: string) => {
 const toPublicOutputPath = (htmlFile: string, targetPath: string) => {
   const normalizedPath = targetPath.replaceAll(path.sep, "/");
 
-  if (siteOrigin) {
-    return `${siteOrigin}/${normalizedPath.replace(/^\/+/, "")}`;
+  if (siteUrl) {
+    return `${siteUrl.href}/${normalizedPath.replace(/^\/+/, "")}`;
   }
 
   return toRelativeOutputPath(htmlFile, normalizedPath);
@@ -1196,18 +1202,30 @@ const toPublicOutputFilePath = (htmlFile: string, targetFile: string) => {
 };
 
 const getConfiguredSitePathname = (value: string) => {
-  if (!siteOrigin) {
+  if (!siteUrl) {
     return null;
   }
 
   try {
     const url = new URL(value);
 
-    if (url.origin !== siteOrigin) {
+    if (url.origin !== siteUrl.origin) {
       return null;
     }
 
-    return url.pathname;
+    if (!siteUrl.basePath) {
+      return url.pathname;
+    }
+
+    if (url.pathname === siteUrl.basePath) {
+      return "/";
+    }
+
+    if (url.pathname.startsWith(`${siteUrl.basePath}/`)) {
+      return url.pathname.slice(siteUrl.basePath.length);
+    }
+
+    return null;
   } catch {
     return null;
   }

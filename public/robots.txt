@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /
 
-Host: https://misaliba.gambaaa.fun/
-Sitemap: https://misaliba.gambaaa.fun/sitemap.xml
+Host: https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb/
+Sitemap: https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb/sitemap.xml
