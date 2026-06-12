@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -41,6 +41,17 @@ jobs:
         run: bun install --frozen-lockfile
       - name: Build site
         run: bun ./compile.ts build --site-url=https://pslib-cz.github.io/2025-p2a-web-volny-projekt-misalibaytb/
+      - name: Push built site to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A dist
+          if git diff --cached --quiet; then
+            echo "No built site changes to commit."
+          else
+            git commit -m "chore: update built site"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
