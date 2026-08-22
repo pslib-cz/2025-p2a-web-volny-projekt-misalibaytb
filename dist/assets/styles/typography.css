@@ -14,64 +14,46 @@
     }
   }
 
-  nav,
-  nav a {
-    font-size: 2rem;
+  .hero {
+    color: var(--text);
   }
 
-  nav a {
-    font-family: "Pixelify Sans", sans-serif;
-    line-height: 1;
-    text-decoration: none;
-  }
-
-  nav .head a {
+  .hero .meta {
     color: var(--text-highlight);
-  }
-
-  nav .links {
-    text-align: left;
-  }
-
-  nav .links a,
-  .scroll {
-    color: var(--white);
-    text-decoration: none;
-  }
-
-  .scroll {
-    font-size: 1.5rem;
-  }
-
-  footer {
-    color: var(--white);
-    font-family: "Pixelify Sans", sans-serif;
     font-size: 1rem;
-    text-align: center;
+    letter-spacing: 0.08em;
   }
 
-  .not-found {
-    color: var(--white);
-    text-align: center;
+  .hero .intro {
+    color: var(--text-heading);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
   }
 
-  .not-found .meta {
-    margin-bottom: 1rem;
+  .hero .lead {
+    color: var(--text);
+    font-size: 1rem;
+    opacity: 0.95;
   }
 
-  .not-found .intro {
-    max-width: 12ch;
-    margin: unset;
-    margin-inline: auto;
-    margin-bottom: 1.25rem;
-    text-wrap: balance;
-  }
+  @media screen and (min-width: 900px) {
+    .techstack .intro,
+    .projects .intro,
+    .contact .intro {
+      max-width: 9ch;
+      font-size: clamp(3rem, 4.2vw, 4.5rem);
+      line-height: 1;
+      overflow-wrap: normal;
+    }
 
-  .not-found .lead {
-    max-width: 42rem;
-    margin-inline: auto;
-    margin-bottom: 2rem;
-    text-wrap: pretty;
+    .techstack .lead,
+    .projects .lead,
+    .contact .lead {
+      max-width: 24rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
   }
 
   html {
@@ -120,6 +102,30 @@
   }
   strong {
     color: var(--text-highlight);
+  }
+
+  .not-found {
+    color: var(--white);
+    text-align: center;
+  }
+
+  .not-found .meta {
+    margin-bottom: 1rem;
+  }
+
+  .not-found .intro {
+    max-width: 12ch;
+    margin: unset;
+    margin-inline: auto;
+    margin-bottom: 1.25rem;
+    text-wrap: balance;
+  }
+
+  .not-found .lead {
+    max-width: 42rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    text-wrap: pretty;
   }
 
   .project-card__number {
@@ -182,45 +188,39 @@
     }
   }
 
-  .hero {
-    color: var(--text);
+  nav,
+  nav a {
+    font-size: 2rem;
   }
 
-  .hero .meta {
-    color: var(--text-highlight);
-    font-size: 1rem;
-    letter-spacing: 0.08em;
-  }
-
-  .hero .intro {
-    color: var(--text-heading);
-    font-size: 3rem;
-    font-weight: 300;
+  nav a {
+    font-family: "Pixelify Sans", sans-serif;
     line-height: 1;
+    text-decoration: none;
   }
 
-  .hero .lead {
-    color: var(--text);
+  nav .head a {
+    color: var(--text-highlight);
+  }
+
+  nav .links {
+    text-align: left;
+  }
+
+  nav .links a,
+  .scroll {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .scroll {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    color: var(--white);
+    font-family: "Pixelify Sans", sans-serif;
     font-size: 1rem;
-    opacity: 0.95;
-  }
-
-  @media screen and (min-width: 900px) {
-    .techstack .intro,
-    .projects .intro,
-    .contact .intro {
-      max-width: 9ch;
-      font-size: clamp(3rem, 4.2vw, 4.5rem);
-      line-height: 1;
-      overflow-wrap: normal;
-    }
-
-    .techstack .lead,
-    .projects .lead,
-    .contact .lead {
-      max-width: 24rem;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
+    text-align: center;
   }
 }

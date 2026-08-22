@@ -1,4 +1,18 @@
 @layer utilities {
+  .home .skillcards > .is-alone-row,
+  .grid-script > .is-alone-row {
+    grid-column: 1 / -1;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   .role-card.blue {
     --this-background: var(--blue-card-background);
     --this-stroke: var(--blue-card-stroke);
@@ -30,19 +44,5 @@
   }
   .project-card.inprogress {
     --this-status: var(--pink);
-  }
-
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-
-  .home .skillcards > .is-alone-row,
-  .grid-script > .is-alone-row {
-    grid-column: 1 / -1;
   }
 }
